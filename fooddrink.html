@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フード&ドリンク | ATHENA - アミューズメントカジノバー 池袋</title>
+  <meta name="description" content="ATHENAのフード&ドリンクメニュー。本格カクテル、ビール、ソフトドリンク、軽食をご用意しています。">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold: '#c5b358', 'gold-light': '#d4c36a', 'gold-dark': '#b09a3e', navy: '#0a0e1a', 'navy-light': '#131833', 'navy-mid': '#1a2040' },
+          fontFamily: { sans: ['Noto Sans JP', 'sans-serif'], serif: ['Noto Serif JP', 'serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .font-serif { font-family: 'Noto Serif JP', serif; }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(197,179,88,0.15); }
+    html { scroll-behavior: smooth; }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+    .mobile-menu.open { transform: translateX(0); }
+  </style>
+</head>
+<body class="bg-navy text-gray-200">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-navy/95 backdrop-blur-md border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-540x462_webp_5555fae8-c7c6-4e61-be8f-8b890bce650a.webp" alt="ATHENA" class="h-10 w-auto">
+          <span class="text-gold font-serif font-bold text-lg hidden sm:block">ATHENA</span>
+        </a>
+        <div class="hidden lg:flex items-center space-x-6 text-sm">
+          <a href="index.html" class="hover:text-gold transition">TOP</a>
+          <a href="beginner.html" class="hover:text-gold transition">初めての方へ</a>
+          <a href="games.html" class="hover:text-gold transition">ゲーム紹介</a>
+          <a href="system.html" class="hover:text-gold transition">料金システム</a>
+          <a href="fooddrink.html" class="text-gold hover:text-gold-light transition">フード&ドリンク</a>
+          <a href="event.html" class="hover:text-gold transition">イベント</a>
+          <a href="recruit.html" class="hover:text-gold transition">採用情報</a>
+          <a href="access.html" class="hover:text-gold transition">アクセス</a>
+          <a href="contact.html" class="bg-gold text-navy px-4 py-2 rounded hover:bg-gold-light transition font-medium">予約する</a>
+        </div>
+        <button id="menu-toggle" class="lg:hidden text-gold"><span class="material-symbols-outlined text-3xl">menu</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-72 bg-navy-light z-50 border-l border-gold/20 p-6 pt-20">
+    <button id="menu-close" class="absolute top-5 right-5 text-gold"><span class="material-symbols-outlined text-3xl">close</span></button>
+    <div class="flex flex-col space-y-4">
+      <a href="index.html" class="py-2 border-b border-gold/10 hover:text-gold transition">TOP</a>
+      <a href="beginner.html" class="py-2 border-b border-gold/10 hover:text-gold transition">初めての方へ</a>
+      <a href="games.html" class="py-2 border-b border-gold/10 hover:text-gold transition">ゲーム紹介</a>
+      <a href="system.html" class="py-2 border-b border-gold/10 hover:text-gold transition">料金システム</a>
+      <a href="fooddrink.html" class="text-gold font-medium py-2 border-b border-gold/10">フード&ドリンク</a>
+      <a href="event.html" class="py-2 border-b border-gold/10 hover:text-gold transition">イベント</a>
+      <a href="recruit.html" class="py-2 border-b border-gold/10 hover:text-gold transition">採用情報</a>
+      <a href="access.html" class="py-2 border-b border-gold/10 hover:text-gold transition">アクセス</a>
+      <a href="contact.html" class="bg-gold text-navy px-4 py-3 rounded text-center font-medium mt-4 hover:bg-gold-light transition">予約する</a>
+    </div>
+  </div>
+  <div id="menu-overlay" class="fixed inset-0 bg-black/60 z-40 hidden"></div>
+
+  <!-- Page Hero -->
+  <section class="pt-28 pb-16 bg-gradient-to-b from-navy-mid to-navy">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gold text-sm font-medium tracking-widest mb-2">FOOD & DRINK</p>
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">フード & ドリンク</h1>
+      <p class="text-gray-300 text-lg leading-relaxed">ゲームのお供に、豊富なメニューをご用意しています。</p>
+    </div>
+  </section>
+
+  <!-- Drink Hero Image -->
+  <section class="pb-12 bg-navy">
+    <div class="max-w-6xl mx-auto px-4">
+      <img src="https://images.unsplash.com/photo-1557653472-b6fbb664920f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8ODJ8fGFsY29ob2x8ZW58MHx8fHwxNjM1OTIxMDEx&ixlib=rb-1.2.1&q=80&w=1080" alt="ドリンク" class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lg">
+    </div>
+  </section>
+
+  <!-- Alcohol Menu -->
+  <section class="py-16 bg-navy">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-14">
+        <div class="flex items-center mb-8">
+          <span class="material-symbols-outlined text-gold text-3xl mr-3">local_bar</span>
+          <h2 class="font-serif text-3xl font-bold text-white">アルコール</h2>
+        </div>
+
+        <!-- Beer -->
+        <div class="mb-10">
+          <h3 class="text-gold font-medium text-lg mb-4 pb-2 border-b border-gold/20">ビール / Beer</h3>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2">
+              <div>
+                <p class="text-white">生ビール</p>
+                <p class="text-gray-500 text-sm">Draft Beer</p>
+              </div>
+              <span class="text-gold font-bold">¥600</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <div>
+                <p class="text-white">瓶ビール</p>
+                <p class="text-gray-500 text-sm">Bottled Beer</p>
+              </div>
+              <span class="text-gold font-bold">¥700</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <div>
+                <p class="text-white">クラフトビール</p>
+                <p class="text-gray-500 text-sm">Craft Beer（日替わり）</p>
+              </div>
+              <span class="text-gold font-bold">¥800</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cocktails -->
+        <div class="mb-10">
+          <h3 class="text-gold font-medium text-lg mb-4 pb-2 border-b border-gold/20">カクテル / Cocktails</h3>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2">
+              <div>
+                <p class="text-white">ジントニック</p>
+                <p class="text-gray-500 text-sm">Gin & Tonic</p>
+              </div>
+              <span class="text-gold font-bold">¥700</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <div>
+                <p class="text-white">モスコミュール</p>
+                <p class="text-gray-500 text-sm">Moscow Mule</p>
+              </div>
+              <span class="text-gold font-bold">¥700</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <div>
+                <p class="text-white">カシスオレンジ</p>
+                <p class="text-gray-500 text-sm">Cassis Orange</p>
+              </div>
+              <span class="text-gold font-bold">¥700</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <div>
+                <p class="text-white">ATHENAスペシャル</p>
+                <p class="text-gray-500 text-sm">当店オリジナルカクテル</p>
+              </div>
+              <span class="text-gold font-bold">¥900</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Whiskey & Others -->
+        <div class="mb-10">
+          <h3 class="text-gold font-medium text-lg mb-4 pb-2 border-b border-gold/20">ウイスキー・ワイン / Whiskey & Wine</h3>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2">
+              <div>
+                <p class="text-white">ハイボール</p>
+                <p class="text-gray-500 text-sm">Highball</p>
+              </div>
+              <span class="text-gold font-bold">¥600</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <div>
+                <p class="text-white">ウイスキー（各種）</p>
+                <p class="text-gray-500 text-sm">Whiskey</p>
+              </div>
+              <span class="text-gold font-bold">¥800〜</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <div>
+                <p class="text-white">グラスワイン（赤・白）</p>
+                <p class="text-gray-500 text-sm">Glass Wine</p>
+              </div>
+              <span class="text-gold font-bold">¥700</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soft Drinks -->
+  <section class="py-16 bg-navy-light">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center mb-8">
+        <span class="material-symbols-outlined text-gold text-3xl mr-3">emoji_food_beverage</span>
+        <h2 class="font-serif text-3xl font-bold text-white">ソフトドリンク</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+        <div class="space-y-3">
+          <div class="flex justify-between items-center py-2">
+            <p class="text-white">コーラ / ジンジャーエール</p>
+            <span class="text-gold font-bold">¥400</span>
+          </div>
+          <div class="flex justify-between items-center py-2">
+            <p class="text-white">オレンジジュース</p>
+            <span class="text-gold font-bold">¥400</span>
+          </div>
+          <div class="flex justify-between items-center py-2">
+            <p class="text-white">ウーロン茶</p>
+            <span class="text-gold font-bold">¥400</span>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="flex justify-between items-center py-2">
+            <p class="text-white">コーヒー（ホット/アイス）</p>
+            <span class="text-gold font-bold">¥400</span>
+          </div>
+          <div class="flex justify-between items-center py-2">
+            <p class="text-white">レッドブル</p>
+            <span class="text-gold font-bold">¥500</span>
+          </div>
+          <div class="flex justify-between items-center py-2">
+            <p class="text-white">ノンアルコールカクテル</p>
+            <span class="text-gold font-bold">¥500</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Food Menu -->
+  <section class="py-16 bg-navy">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center mb-8">
+        <span class="material-symbols-outlined text-gold text-3xl mr-3">restaurant</span>
+        <h2 class="font-serif text-3xl font-bold text-white">フード</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+        <div class="space-y-3">
+          <div class="flex justify-between items-center py-2">
+            <div>
+              <p class="text-white">ミックスナッツ</p>
+              <p class="text-gray-500 text-sm">Mixed Nuts</p>
+            </div>
+            <span class="text-gold font-bold">¥400</span>
+          </div>
+          <div class="flex justify-between items-center py-2">
+            <div>
+              <p class="text-white">フライドポテト</p>
+              <p class="text-gray-500 text-sm">French Fries</p>
+            </div>
+            <span class="text-gold font-bold">¥500</span>
+          </div>
+          <div class="flex justify-between items-center py-2">
+            <div>
+              <p class="text-white">枝豆</p>
+              <p class="text-gray-500 text-sm">Edamame</p>
+            </div>
+            <span class="text-gold font-bold">¥400</span>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="flex justify-between items-center py-2">
+            <div>
+              <p class="text-white">ピザ</p>
+              <p class="text-gray-500 text-sm">Pizza</p>
+            </div>
+            <span class="text-gold font-bold">¥800</span>
+          </div>
+          <div class="flex justify-between items-center py-2">
+            <div>
+              <p class="text-white">チキンナゲット</p>
+              <p class="text-gray-500 text-sm">Chicken Nuggets</p>
+            </div>
+            <span class="text-gold font-bold">¥500</span>
+          </div>
+          <div class="flex justify-between items-center py-2">
+            <div>
+              <p class="text-white">チーズ盛り合わせ</p>
+              <p class="text-gray-500 text-sm">Cheese Platter</p>
+            </div>
+            <span class="text-gold font-bold">¥700</span>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-500 text-sm mt-8">※メニューや価格は予告なく変更する場合がございます。</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-b from-navy to-navy-light">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">ゲームとドリンクを楽しもう</h2>
+      <p class="text-gray-300 mb-8">エントリーフィーに1ドリンクが含まれています。</p>
+      <a href="contact.html" class="bg-gold text-navy px-8 py-3 rounded-lg font-bold hover:bg-gold-light transition">予約する</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy border-t border-gold/10 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-540x462_webp_5555fae8-c7c6-4e61-be8f-8b890bce650a.webp" alt="ATHENA" class="h-16 w-auto mb-4">
+          <p class="text-gray-400 text-sm leading-relaxed">池袋西口最大級<br>アミューズメントカジノバー</p>
+          <div class="flex space-x-4 mt-4">
+            <a href="https://twitter.com/athena_poker" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-x-twitter text-xl"></i></a>
+            <a href="https://instagram.com/athena_ikebukuro" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="https://youtube.com/@athena414" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-youtube text-xl"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-gold font-medium mb-4">INFORMATION</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="beginner.html" class="text-gray-400 hover:text-gold transition">初めての方へ</a></li>
+            <li><a href="games.html" class="text-gray-400 hover:text-gold transition">ゲーム紹介</a></li>
+            <li><a href="system.html" class="text-gray-400 hover:text-gold transition">料金システム</a></li>
+            <li><a href="fooddrink.html" class="text-gray-400 hover:text-gold transition">フード&ドリンク</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-gold font-medium mb-4">LINKS</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="event.html" class="text-gray-400 hover:text-gold transition">イベント</a></li>
+            <li><a href="recruit.html" class="text-gray-400 hover:text-gold transition">採用情報</a></li>
+            <li><a href="access.html" class="text-gray-400 hover:text-gold transition">アクセス</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-gold transition">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-gold font-medium mb-4">CONTACT</h4>
+          <p class="text-gray-400 text-sm mb-2">東京都豊島区池袋2-12-13<br>十二ビル4F</p>
+          <p class="text-gray-400 text-sm mb-2">TEL: <a href="tel:03-6903-1642" class="hover:text-gold transition">03-6903-1642</a></p>
+          <p class="text-gray-400 text-sm">営業時間: 13:00〜24:00</p>
+        </div>
+      </div>
+      <div class="border-t border-gold/10 pt-8 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2024 ATHENA - アミューズメントカジノバー 池袋. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+    function openMenu() { mobileMenu.classList.add('open'); menuOverlay.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { mobileMenu.classList.remove('open'); menuOverlay.classList.add('hidden'); document.body.style.overflow = ''; }
+    menuToggle.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+  </script>
+</body>
+</html>

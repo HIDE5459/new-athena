@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>イベント | ATHENA - アミューズメントカジノバー 池袋</title>
+  <meta name="description" content="ATHENAのイベント情報。トーナメント、初心者大会、レディースデーなど様々なイベントを開催中。">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold: '#c5b358', 'gold-light': '#d4c36a', 'gold-dark': '#b09a3e', navy: '#0a0e1a', 'navy-light': '#131833', 'navy-mid': '#1a2040' },
+          fontFamily: { sans: ['Noto Sans JP', 'sans-serif'], serif: ['Noto Serif JP', 'serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .font-serif { font-family: 'Noto Serif JP', serif; }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(197,179,88,0.15); }
+    html { scroll-behavior: smooth; }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+    .mobile-menu.open { transform: translateX(0); }
+  </style>
+</head>
+<body class="bg-navy text-gray-200">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-navy/95 backdrop-blur-md border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-540x462_webp_5555fae8-c7c6-4e61-be8f-8b890bce650a.webp" alt="ATHENA" class="h-10 w-auto">
+          <span class="text-gold font-serif font-bold text-lg hidden sm:block">ATHENA</span>
+        </a>
+        <div class="hidden lg:flex items-center space-x-6 text-sm">
+          <a href="index.html" class="hover:text-gold transition">TOP</a>
+          <a href="beginner.html" class="hover:text-gold transition">初めての方へ</a>
+          <a href="games.html" class="hover:text-gold transition">ゲーム紹介</a>
+          <a href="system.html" class="hover:text-gold transition">料金システム</a>
+          <a href="fooddrink.html" class="hover:text-gold transition">フード&ドリンク</a>
+          <a href="event.html" class="text-gold hover:text-gold-light transition">イベント</a>
+          <a href="recruit.html" class="hover:text-gold transition">採用情報</a>
+          <a href="access.html" class="hover:text-gold transition">アクセス</a>
+          <a href="contact.html" class="bg-gold text-navy px-4 py-2 rounded hover:bg-gold-light transition font-medium">予約する</a>
+        </div>
+        <button id="menu-toggle" class="lg:hidden text-gold"><span class="material-symbols-outlined text-3xl">menu</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-72 bg-navy-light z-50 border-l border-gold/20 p-6 pt-20">
+    <button id="menu-close" class="absolute top-5 right-5 text-gold"><span class="material-symbols-outlined text-3xl">close</span></button>
+    <div class="flex flex-col space-y-4">
+      <a href="index.html" class="py-2 border-b border-gold/10 hover:text-gold transition">TOP</a>
+      <a href="beginner.html" class="py-2 border-b border-gold/10 hover:text-gold transition">初めての方へ</a>
+      <a href="games.html" class="py-2 border-b border-gold/10 hover:text-gold transition">ゲーム紹介</a>
+      <a href="system.html" class="py-2 border-b border-gold/10 hover:text-gold transition">料金システム</a>
+      <a href="fooddrink.html" class="py-2 border-b border-gold/10 hover:text-gold transition">フード&ドリンク</a>
+      <a href="event.html" class="text-gold font-medium py-2 border-b border-gold/10">イベント</a>
+      <a href="recruit.html" class="py-2 border-b border-gold/10 hover:text-gold transition">採用情報</a>
+      <a href="access.html" class="py-2 border-b border-gold/10 hover:text-gold transition">アクセス</a>
+      <a href="contact.html" class="bg-gold text-navy px-4 py-3 rounded text-center font-medium mt-4 hover:bg-gold-light transition">予約する</a>
+    </div>
+  </div>
+  <div id="menu-overlay" class="fixed inset-0 bg-black/60 z-40 hidden"></div>
+
+  <!-- Page Hero -->
+  <section class="pt-28 pb-16 bg-gradient-to-b from-navy-mid to-navy">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gold text-sm font-medium tracking-widest mb-2">EVENTS</p>
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">イベント情報</h1>
+      <p class="text-gray-300 text-lg leading-relaxed">ATHENAでは様々なイベントやトーナメントを開催しています。</p>
+    </div>
+  </section>
+
+  <!-- Regular Events -->
+  <section class="py-20 bg-navy">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-gold text-sm font-medium tracking-widest mb-2">REGULAR</p>
+        <h2 class="font-serif text-3xl font-bold text-white">定期イベント</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Daily Tournament -->
+        <div class="card-hover bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
+          <div class="bg-gold/10 p-4 flex items-center justify-between">
+            <span class="text-gold font-bold text-sm">毎日開催</span>
+            <span class="bg-gold/20 text-gold px-2 py-0.5 rounded text-xs">初心者歓迎</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-white mb-3">デイリートーナメント</h3>
+            <div class="space-y-2 text-sm text-gray-300 mb-4">
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">schedule</span>平日 19:00〜</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">monetization_on</span>バイイン: ¥3,000</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">emoji_events</span>優勝賞品あり</div>
+            </div>
+            <p class="text-gray-400 text-sm">毎日開催のトーナメント。初心者の方も参加しやすいレベル設定です。</p>
+          </div>
+        </div>
+
+        <!-- Weekend Tournament -->
+        <div class="card-hover bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
+          <div class="bg-gold/10 p-4 flex items-center justify-between">
+            <span class="text-gold font-bold text-sm">毎週土日</span>
+            <span class="bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded text-xs">本格派</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-white mb-3">ウィークエンドトーナメント</h3>
+            <div class="space-y-2 text-sm text-gray-300 mb-4">
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">schedule</span>土日 15:00〜</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">monetization_on</span>バイイン: ¥5,000</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">emoji_events</span>豪華賞品あり</div>
+            </div>
+            <p class="text-gray-400 text-sm">週末限定の本格トーナメント。腕試しにぜひご参加ください。</p>
+          </div>
+        </div>
+
+        <!-- Beginner Tournament -->
+        <div class="card-hover bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
+          <div class="bg-gold/10 p-4 flex items-center justify-between">
+            <span class="text-gold font-bold text-sm">毎週水曜</span>
+            <span class="bg-green-500/20 text-green-300 px-2 py-0.5 rounded text-xs">超初心者向け</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-white mb-3">初心者トーナメント</h3>
+            <div class="space-y-2 text-sm text-gray-300 mb-4">
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">schedule</span>水曜 19:00〜</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">monetization_on</span>バイイン: ¥2,000</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">school</span>講習付き</div>
+            </div>
+            <p class="text-gray-400 text-sm">初心者限定トーナメント。トーナメント前にルール講習もあります。</p>
+          </div>
+        </div>
+
+        <!-- Ladies Day -->
+        <div class="card-hover bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
+          <div class="bg-gold/10 p-4 flex items-center justify-between">
+            <span class="text-gold font-bold text-sm">毎週金曜</span>
+            <span class="bg-pink-500/20 text-pink-300 px-2 py-0.5 rounded text-xs">女性限定特典</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-white mb-3">レディースデー</h3>
+            <div class="space-y-2 text-sm text-gray-300 mb-4">
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">schedule</span>金曜 終日</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">redeem</span>エントリーフィー無料</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">local_bar</span>ドリンク1杯サービス</div>
+            </div>
+            <p class="text-gray-400 text-sm">女性のお客様はエントリーフィー無料。ドリンク1杯もサービスします。</p>
+          </div>
+        </div>
+
+        <!-- Free Lesson -->
+        <div class="card-hover bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
+          <div class="bg-gold/10 p-4 flex items-center justify-between">
+            <span class="text-gold font-bold text-sm">毎日開催</span>
+            <span class="bg-gold/20 text-gold px-2 py-0.5 rounded text-xs">無料</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-white mb-3">無料ポーカー講習</h3>
+            <div class="space-y-2 text-sm text-gray-300 mb-4">
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">schedule</span>毎日 13:00〜</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">timer</span>約30分〜1時間</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">person</span>予約不要</div>
+            </div>
+            <p class="text-gray-400 text-sm">スタッフがポーカーのルールを丁寧にお教えします。完全無料です。</p>
+          </div>
+        </div>
+
+        <!-- Monthly -->
+        <div class="card-hover bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
+          <div class="bg-gold/10 p-4 flex items-center justify-between">
+            <span class="text-gold font-bold text-sm">月1回</span>
+            <span class="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-xs">ビッグイベント</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-white mb-3">ATHENA Monthly</h3>
+            <div class="space-y-2 text-sm text-gray-300 mb-4">
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">schedule</span>毎月最終土曜</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">monetization_on</span>バイイン: ¥10,000</div>
+              <div class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">emoji_events</span>賞金総額 豪華</div>
+            </div>
+            <p class="text-gray-400 text-sm">月に一度の大規模トーナメント。実力を試す最高の舞台です。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Calendar Info -->
+  <section class="py-20 bg-navy-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="md:flex items-center gap-12">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img src="https://images.unsplash.com/photo-1608228079968-c7681afb8f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NHx8Y2FsZW5kZXJ8ZW58MHx8fHwxNjM1OTIxNjE2&ixlib=rb-1.2.1&q=80&w=1080" alt="カレンダー" class="w-full rounded-xl shadow-lg">
+        </div>
+        <div class="md:w-1/2">
+          <p class="text-gold text-sm font-medium tracking-widest mb-2">SCHEDULE</p>
+          <h2 class="font-serif text-3xl font-bold text-white mb-6">最新スケジュール</h2>
+          <p class="text-gray-300 leading-relaxed mb-6">最新のイベント情報やトーナメントスケジュールはSNSでお知らせしています。フォローして最新情報をチェックしてください。</p>
+          <div class="space-y-3">
+            <a href="https://twitter.com/athena_poker" target="_blank" class="flex items-center bg-navy/50 border border-gold/10 rounded-lg p-4 hover:border-gold/30 transition">
+              <i class="fab fa-x-twitter text-gold text-xl mr-4"></i>
+              <div>
+                <p class="text-white font-medium">@athena_poker</p>
+                <p class="text-gray-500 text-sm">最新情報をチェック</p>
+              </div>
+            </a>
+            <a href="https://instagram.com/athena_ikebukuro" target="_blank" class="flex items-center bg-navy/50 border border-gold/10 rounded-lg p-4 hover:border-gold/30 transition">
+              <i class="fab fa-instagram text-gold text-xl mr-4"></i>
+              <div>
+                <p class="text-white font-medium">@athena_ikebukuro</p>
+                <p class="text-gray-500 text-sm">写真・動画をチェック</p>
+              </div>
+            </a>
+            <a href="https://youtube.com/@athena414" target="_blank" class="flex items-center bg-navy/50 border border-gold/10 rounded-lg p-4 hover:border-gold/30 transition">
+              <i class="fab fa-youtube text-gold text-xl mr-4"></i>
+              <div>
+                <p class="text-white font-medium">@athena414</p>
+                <p class="text-gray-500 text-sm">イベント動画をチェック</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-b from-navy-light to-navy">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">イベントに参加してみませんか？</h2>
+      <p class="text-gray-300 mb-8">初心者トーナメントや無料講習もあります。お気軽にご参加ください。</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="bg-gold text-navy px-8 py-3 rounded-lg font-bold hover:bg-gold-light transition">お問い合わせ</a>
+        <a href="tel:03-6903-1642" class="border border-gold text-gold px-8 py-3 rounded-lg font-bold hover:bg-gold/10 transition">
+          <span class="material-symbols-outlined align-middle mr-1">phone</span>03-6903-1642
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy border-t border-gold/10 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-540x462_webp_5555fae8-c7c6-4e61-be8f-8b890bce650a.webp" alt="ATHENA" class="h-16 w-auto mb-4">
+          <p class="text-gray-400 text-sm leading-relaxed">池袋西口最大級<br>アミューズメントカジノバー</p>
+          <div class="flex space-x-4 mt-4">
+            <a href="https://twitter.com/athena_poker" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-x-twitter text-xl"></i></a>
+            <a href="https://instagram.com/athena_ikebukuro" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="https://youtube.com/@athena414" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-youtube text-xl"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-gold font-medium mb-4">INFORMATION</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="beginner.html" class="text-gray-400 hover:text-gold transition">初めての方へ</a></li>
+            <li><a href="games.html" class="text-gray-400 hover:text-gold transition">ゲーム紹介</a></li>
+            <li><a href="system.html" class="text-gray-400 hover:text-gold transition">料金システム</a></li>
+            <li><a href="fooddrink.html" class="text-gray-400 hover:text-gold transition">フード&ドリンク</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-gold font-medium mb-4">LINKS</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="event.html" class="text-gray-400 hover:text-gold transition">イベント</a></li>
+            <li><a href="recruit.html" class="text-gray-400 hover:text-gold transition">採用情報</a></li>
+            <li><a href="access.html" class="text-gray-400 hover:text-gold transition">アクセス</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-gold transition">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-gold font-medium mb-4">CONTACT</h4>
+          <p class="text-gray-400 text-sm mb-2">東京都豊島区池袋2-12-13<br>十二ビル4F</p>
+          <p class="text-gray-400 text-sm mb-2">TEL: <a href="tel:03-6903-1642" class="hover:text-gold transition">03-6903-1642</a></p>
+          <p class="text-gray-400 text-sm">営業時間: 13:00〜24:00</p>
+        </div>
+      </div>
+      <div class="border-t border-gold/10 pt-8 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2024 ATHENA - アミューズメントカジノバー 池袋. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+    function openMenu() { mobileMenu.classList.add('open'); menuOverlay.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { mobileMenu.classList.remove('open'); menuOverlay.classList.add('hidden'); document.body.style.overflow = ''; }
+    menuToggle.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+  </script>
+</body>
+</html>
