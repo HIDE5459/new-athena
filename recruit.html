@@ -1,304 +1,242 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="ja"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "on-error": "#690005",
-            "surface-tint": "#e9c349",
-            "surface-container-high": "#292936",
-            "on-secondary-fixed-variant": "#3f4273",
-            "on-tertiary-fixed-variant": "#544600",
-            "inverse-surface": "#e3e0f3",
-            "primary-fixed": "#ffe088",
-            "on-surface": "#e3e0f3",
-            "surface-container-lowest": "#0d0d19",
-            "on-surface-variant": "#d0c5af",
-            "inverse-primary": "#735c00",
-            "on-tertiary-container": "#534400",
-            "on-tertiary-fixed": "#221b00",
-            "on-primary-container": "#554300",
-            "surface-container": "#1f1e2b",
-            "secondary-fixed": "#e0e0ff",
-            "on-primary": "#3c2f00",
-            "tertiary": "#f2cc00",
-            "surface-container-highest": "#343341",
-            "on-secondary-fixed": "#131645",
-            "secondary": "#bfc2fb",
-            "on-error-container": "#ffdad6",
-            "surface-variant": "#343341",
-            "primary-fixed-dim": "#e9c349",
-            "tertiary-fixed": "#ffe16d",
-            "surface-bright": "#383846",
-            "background": "#12121f",
-            "outline-variant": "#4d4635",
-            "on-secondary": "#282c5b",
-            "on-secondary-container": "#aeb1e9",
-            "error": "#ffb4ab",
-            "surface-container-low": "#1a1a27",
-            "on-tertiary": "#3a3000",
-            "inverse-on-surface": "#2f2f3d",
-            "secondary-container": "#3f4273",
-            "outline": "#99907c",
-            "tertiary-container": "#d2b100",
-            "secondary-fixed-dim": "#bfc2fb",
-            "on-primary-fixed": "#241a00",
-            "surface": "#12121f",
-            "primary-container": "#d4af37",
-            "on-background": "#e3e0f3",
-            "surface-dim": "#12121f",
-            "on-primary-fixed-variant": "#574500",
-            "tertiary-fixed-dim": "#e9c400",
-            "primary": "#f2ca50",
-            "error-container": "#93000a"
-          },
-          fontFamily: {
-            "headline": ["Noto Serif JP", "serif"],
-            "body": ["Manrope", "sans-serif"],
-            "label": ["Manrope", "sans-serif"]
-          },
-          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-        },
-      },
-    }
-  </script>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採用情報 - ATHENA</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>
+tailwind.config={theme:{extend:{colors:{dark:{900:'#080b11',800:'#0a0e1a',700:'#0d1117',600:'#131820',500:'#1a1f2e'},gold:{DEFAULT:'#c5b358',light:'#d4c56a',dark:'#a89840'},warm:{DEFAULT:'#e8e6e1',muted:'#8b8680'}},fontFamily:{heading:['Cormorant Garamond','serif'],body:['Noto Sans JP','sans-serif']}}}}
+</script>
 <style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
-    .headline-serif { font-family: 'Noto Serif JP', serif; font-style: italic; }
-    .glass-card {
-      background: rgba(31, 30, 43, 0.6);
-      backdrop-filter: blur(24px);
-      border-top: 1px solid rgba(242, 202, 80, 0.2);
-    }
-    .gold-gradient {
-      background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
-    }
-    .nocturnal-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent 0%, rgba(242, 202, 80, 0.5) 50%, transparent 100%);
-    }
-  </style>
-</head>
-<body class="bg-background text-on-background font-body selection:bg-primary/30 selection:text-primary">
-<!-- Shared Navigation -->
-<nav style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(10,14,26,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(197,179,88,0.2);padding:12px 24px;display:flex;justify-content:space-between;align-items:center;font-family:'Noto Sans JP',sans-serif;">
-  <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
-    <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-480x150_webp_30ea6a5b-683f-4d2d-88ec-a3de425c4baf.webp" alt="ATHENA" style="height:30px;">
-  </a>
-  <div class="desktop-nav" style="display:flex;gap:24px;align-items:center;">
-    <a href="index.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">TOP</a>
-    <a href="beginner.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">初めての方へ</a>
-    <a href="games.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">ゲーム紹介</a>
-    <a href="system.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">料金システム</a>
-    <a href="fooddrink.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">フード＆ドリンク</a>
-    <a href="event.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">イベント</a>
-    <a href="recruit.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">採用情報</a>
-    <a href="access.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">アクセス</a>
-    <a href="contact.html" style="background:#c5b358;color:#0a0e1a;padding:8px 20px;border-radius:4px;text-decoration:none;font-size:13px;font-weight:700;">予約する</a>
-  </div>
-  <button id="hamburger-btn" style="display:none;background:none;border:none;color:#c5b358;font-size:28px;cursor:pointer;font-family:Material Symbols Outlined;" onclick="document.getElementById('sp-menu').classList.add('open');document.getElementById('sp-overlay').classList.add('open');">menu</button>
-</nav>
-<style>
-@media(max-width:990px){.desktop-nav{display:none!important;}#hamburger-btn{display:block!important;}}
-#sp-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:99998;}
-#sp-overlay.open{display:block;}
-#sp-menu{position:fixed;top:0;right:0;width:280px;height:100vh;background:#0a0e1a;z-index:99999;transform:translateX(100%);transition:transform 0.3s;padding:60px 30px;display:flex;flex-direction:column;gap:4px;border-left:1px solid rgba(197,179,88,0.3);}
-#sp-menu.open{transform:translateX(0);}
-#sp-menu a{color:#e0dcd0;text-decoration:none;font-size:15px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-family:'Noto Sans JP',sans-serif;}
-#sp-menu a:hover{color:#c5b358;}
-#sp-menu .close-btn{position:absolute;top:16px;right:16px;background:none;border:none;color:#c5b358;font-size:28px;cursor:pointer;font-family:Material Symbols Outlined;}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Noto Sans JP',sans-serif;background:#0d1117;color:#e8e6e1;overflow-x:hidden}.font-heading{font-family:'Cormorant Garamond',serif}.gold-line{width:60px;height:1px;background:#c5b358}.card-border{border:1px solid rgba(197,179,88,0.1)}.gold-glow:hover{box-shadow:0 0 30px rgba(197,179,88,0.12)}.nav-fixed{position:fixed;top:0;left:0;right:0;z-index:100;transition:background 0.3s,backdrop-filter 0.3s}.nav-scrolled{background:rgba(13,17,23,0.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}#mobileMenu{position:fixed;inset:0;background:rgba(13,17,23,0.97);backdrop-filter:blur(30px);z-index:200;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.4s ease}#mobileMenu.active{opacity:1;pointer-events:all}.fade-up{opacity:0;transform:translateY(40px);transition:opacity 0.8s ease,transform 0.8s ease}.fade-up.visible{opacity:1;transform:translateY(0)}
 </style>
-<div id="sp-overlay" onclick="document.getElementById('sp-menu').classList.remove('open');this.classList.remove('open');"></div>
-<div id="sp-menu">
-  <button class="close-btn" onclick="document.getElementById('sp-menu').classList.remove('open');document.getElementById('sp-overlay').classList.remove('open');">close</button>
-  <a href="index.html">TOP</a>
-  <a href="beginner.html">初めての方へ</a>
-  <a href="games.html">ゲーム紹介</a>
-  <a href="system.html">料金システム</a>
-  <a href="fooddrink.html">フード＆ドリンク</a>
-  <a href="event.html">イベント</a>
-  <a href="recruit.html">採用情報</a>
-  <a href="access.html">アクセス</a>
-  <a href="contact.html">お問い合わせ</a>
-</div>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<!-- End Shared Navigation -->
+</head>
+<body>
 
-<!-- TopNavBar Execution -->
-<nav class="sticky top-0 z-50 bg-[#12121f] dark:bg-[#12121f] transition-all duration-300">
-<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto border-b border-[#f2ca50]/20">
-<div class="text-2xl font-serif font-bold tracking-tighter text-[#f2ca50]">ATHENA</div>
-<div class="hidden md:flex items-center gap-10">
-<a class="text-slate-400 font-sans uppercase text-xs tracking-widest hover:text-[#f2ca50] transition-all duration-300 ease-in-out" href="#">Careers</a>
-<a class="text-slate-400 font-sans uppercase text-xs tracking-widest hover:text-[#f2ca50] transition-all duration-300 ease-in-out" href="#">Our Culture</a>
-<a class="text-slate-400 font-sans uppercase text-xs tracking-widest hover:text-[#f2ca50] transition-all duration-300 ease-in-out" href="#">Benefits</a>
-<a class="text-slate-400 font-sans uppercase text-xs tracking-widest hover:text-[#f2ca50] transition-all duration-300 ease-in-out" href="#">Venues</a>
-</div>
-<button class="gold-gradient text-on-primary px-6 py-2 rounded-lg font-label font-bold text-sm tracking-tight active:scale-95 transition-all duration-300">
-        Apply Now
-      </button>
-</div>
+<!-- Navigation -->
+<nav class="nav-fixed py-4 px-6 lg:px-12" id="mainNav">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="index.html"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-480x150_webp_30ea6a5b-683f-4d2d-88ec-a3de425c4baf.webp" alt="ATHENA" class="h-8 lg:h-10"></a>
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="beginner.html" class="text-warm/70 hover:text-gold text-sm tracking-wider transition-colors font-light">初めての方へ</a>
+      <a href="games.html" class="text-warm/70 hover:text-gold text-sm tracking-wider transition-colors font-light">ゲーム</a>
+      <a href="system.html" class="text-warm/70 hover:text-gold text-sm tracking-wider transition-colors font-light">料金システム</a>
+      <a href="fooddrink.html" class="text-warm/70 hover:text-gold text-sm tracking-wider transition-colors font-light">フード&ドリンク</a>
+      <a href="event.html" class="text-warm/70 hover:text-gold text-sm tracking-wider transition-colors font-light">イベント</a>
+      <a href="recruit.html" class="text-gold text-sm tracking-wider transition-colors font-light">採用情報</a>
+      <a href="access.html" class="text-warm/70 hover:text-gold text-sm tracking-wider transition-colors font-light">アクセス</a>
+      <a href="contact.html" class="bg-gold text-dark-900 px-6 py-2.5 text-sm font-medium tracking-wider hover:bg-gold-light transition-colors">予約する</a>
+    </div>
+    <button class="lg:hidden text-warm" onclick="toggleMenu()"><span class="material-symbols-outlined text-3xl">menu</span></button>
+  </div>
 </nav>
-<main>
-<!-- Hero Section -->
-<section class="relative min-h-[819px] flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-40" data-alt="Luxurious dark casino interior with soft warm lighting on velvet surfaces and polished mahogany tables, sophisticated high-end atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvMEUPyzz8eeVOxT3WA2nOo1-O-4F0vW_9AeCGJk11Nv24T9Gxb65tF99NC_SAmxVGV4gm9-MUAxOZje1LSP2zbEcnE1FA02ZwxNUriwpJtRhAm9hvwbuSm2WytWljxJuPKhJLZ_mfdb-jeYMI_gVy7lR9HNVHDA2xY2xJIPBwVzNeScHUu-xdNmXMCjvYjb_SGVBQ28zYXHQpatQBq7fPXi11-9MIbOaFYHYqjTlhBojwuED-Vmbz91LeWM0HWdVv4u30z4_yO6Q"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
+<div id="mobileMenu">
+  <button class="absolute top-6 right-6 text-warm" onclick="toggleMenu()"><span class="material-symbols-outlined text-3xl">close</span></button>
+  <div class="flex flex-col items-center gap-8">
+    <a href="index.html" class="font-heading text-3xl text-warm hover:text-gold transition-colors">Home</a>
+    <a href="beginner.html" class="font-heading text-3xl text-warm hover:text-gold transition-colors">初めての方へ</a>
+    <a href="games.html" class="font-heading text-3xl text-warm hover:text-gold transition-colors">ゲーム</a>
+    <a href="system.html" class="font-heading text-3xl text-warm hover:text-gold transition-colors">料金システム</a>
+    <a href="fooddrink.html" class="font-heading text-3xl text-warm hover:text-gold transition-colors">フード&ドリンク</a>
+    <a href="event.html" class="font-heading text-3xl text-warm hover:text-gold transition-colors">イベント</a>
+    <a href="recruit.html" class="font-heading text-3xl text-gold">採用情報</a>
+    <a href="access.html" class="font-heading text-3xl text-warm hover:text-gold transition-colors">アクセス</a>
+    <a href="contact.html" class="bg-gold text-dark-900 px-8 py-3 text-lg tracking-wider mt-4">予約する</a>
+  </div>
 </div>
-<div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-<h1 class="font-headline italic text-5xl md:text-7xl text-primary mb-6 tracking-tighter leading-tight">
-          採用情報
-        </h1>
-<p class="font-headline text-2xl md:text-3xl text-on-surface mb-8 tracking-wide font-light">
-          一緒に最高のエンターテインメントを創りませんか
-        </p>
-<div class="w-24 h-1 bg-primary mx-auto mb-12"></div>
-</div>
+
+<!-- Hero -->
+<section class="relative pt-40 pb-24 lg:pt-52 lg:pb-36 bg-dark-700 overflow-hidden">
+  <div class="absolute inset-0 opacity-15">
+    <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-587x425_webp_998df134-9eac-4cbb-a496-e4aa9f3e1a22.webp" alt="" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-b from-dark-700 via-dark-700/80 to-dark-700"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-12 text-center">
+    <p class="text-gold text-[11px] tracking-[6px] uppercase mb-4 font-heading font-semibold">Join Our Team</p>
+    <h1 class="font-heading text-6xl lg:text-[88px] font-bold text-warm tracking-wider">RECRUIT</h1>
+    <p class="text-warm-muted text-sm tracking-[3px] mt-4">共に最高の空間を創る</p>
+    <div class="gold-line mx-auto mt-8"></div>
+  </div>
 </section>
-<!-- Appeal Cards Section (Bento Inspired) -->
-<section class="py-24 px-8 max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Card 1 -->
-<div class="glass-card p-10 rounded-xl group hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
-<div class="mb-6 text-primary">
-<span class="material-symbols-outlined text-4xl" data-icon="auto_awesome">auto_awesome</span>
-</div>
-<h3 class="font-headline text-2xl text-primary mb-4">未経験歓迎</h3>
-<p class="text-on-surface-variant leading-relaxed text-sm">
-            専門知識がなくても、一流のホスピタリティと技術を学べる研修制度が整っています。あなたの「挑戦したい」という気持ちを大切にします。
-          </p>
-</div>
-<!-- Card 2 -->
-<div class="glass-card p-10 rounded-xl group hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
-<div class="mb-6 text-primary">
-<span class="material-symbols-outlined text-4xl" data-icon="celebration">celebration</span>
-</div>
-<h3 class="font-headline text-2xl text-primary mb-4">楽しい職場</h3>
-<p class="text-on-surface-variant leading-relaxed text-sm">
-            多様なバックグラウンドを持つスタッフが活躍中。チームワークを重視し、お互いを高め合える華やかで活気ある環境です。
-          </p>
-</div>
-<!-- Card 3 -->
-<div class="glass-card p-10 rounded-xl group hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
-<div class="mb-6 text-primary">
-<span class="material-symbols-outlined text-4xl" data-icon="trending_up">trending_up</span>
-</div>
-<h3 class="font-headline text-2xl text-primary mb-4">スキルアップ</h3>
-<p class="text-on-surface-variant leading-relaxed text-sm">
-            国際的な接客マナーから高度なディーリング技術まで、プロフェッショナルとしての確かなキャリアを築くことが可能です。
-          </p>
-</div>
-</div>
-</section>
-<!-- Job Details Section (Editorial Table) -->
-<section class="py-24 bg-surface-container-low">
-<div class="max-w-5xl mx-auto px-8">
-<h2 class="font-headline text-3xl text-primary mb-16 text-center italic tracking-widest">Job Details</h2>
-<div class="overflow-hidden border-t border-primary/20">
-<div class="grid grid-cols-1 md:grid-cols-4 items-center border-b border-primary/10 py-8">
-<div class="text-xs uppercase tracking-[0.3em] text-outline px-4 mb-2 md:mb-0">Position</div>
-<div class="md:col-span-3 text-xl font-headline px-4">ディーラー募集</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 items-center border-b border-primary/10 py-8">
-<div class="text-xs uppercase tracking-[0.3em] text-outline px-4 mb-2 md:mb-0">Wage</div>
-<div class="md:col-span-3 text-xl font-headline px-4">時給1200円 <span class="text-xs font-sans text-outline ml-2">※研修期間中も同一支給</span></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 items-center border-b border-primary/10 py-8">
-<div class="text-xs uppercase tracking-[0.3em] text-outline px-4 mb-2 md:mb-0">Schedule</div>
-<div class="md:col-span-3 text-xl font-headline px-4">シフト制 <span class="text-xs font-sans text-outline ml-2">18:00 - 05:00 (週3日〜 / 1日4h〜)</span></div>
-</div>
-</div>
-</div>
-</section>
-<!-- Ideal Candidate (Asymmetric Layout) -->
-<section class="py-32 px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-<div class="w-full md:w-1/2 relative">
-<div class="absolute -top-4 -left-4 w-32 h-32 border-t-2 border-l-2 border-primary/30"></div>
-<img class="w-full h-[500px] object-cover rounded-sm relative z-10 shadow-2xl" data-alt="Professional young woman in elegant dark attire making eye contact with a warm confident smile, studio lighting with dark textured background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1zIg8nFrImFz16nLv0ogbQS0LNr4VCq_hKzeduppyN7O65vNG8KRCzUH6kA3TGAFBnw4KxEclb4-9p5qzqaNqy4Qy_NchhvGE0asAjiGoNnSldMNO3yu6UYf12KcXkX1Jm68-u2wvRllCSAHtayLCBVzrdwa-vGcv7KsT0SsucM0vz0EcqCUmbjQpcn5RZcM82-5XeQ3Zj-IoI097VpUdVKaQhk-Auw0hc7PX6jDco-ggPDI8RcSRA5i3ru-DZEQvTRIwXAT2LoE"/>
-<div class="absolute -bottom-4 -right-4 w-32 h-32 border-b-2 border-r-2 border-primary/30"></div>
-</div>
-<div class="w-full md:w-1/2">
-<h2 class="font-headline text-4xl text-primary mb-8 italic">求める人物像</h2>
-<div class="space-y-8">
-<div class="flex gap-6 items-start">
-<span class="text-primary font-headline text-2xl opacity-40">01</span>
-<div>
-<h4 class="font-bold text-lg mb-2">誠実さとホスピタリティ</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">お客様に特別な時間を提供するため、細やかな配慮と誠実な姿勢で接することができる方。</p>
-</div>
-</div>
-<div class="flex gap-6 items-start">
-<span class="text-primary font-headline text-2xl opacity-40">02</span>
-<div>
-<h4 class="font-bold text-lg mb-2">向上心と柔軟性</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">常に新しい技術や知識を吸収しようとする姿勢を持ち、変化を楽しむことができる方。</p>
-</div>
-</div>
-<div class="flex gap-6 items-start">
-<span class="text-primary font-headline text-2xl opacity-40">03</span>
-<div>
-<h4 class="font-bold text-lg mb-2">チームプレイヤー</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">仲間と協力し合い、最高の結果を出すためにコミュニケーションを大切にできる方。</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Application Form -->
-<section class="py-24 bg-surface-container-lowest">
-<div class="max-w-3xl mx-auto px-8">
-<div class="text-center mb-16">
-<h2 class="font-headline text-4xl text-primary mb-4 italic">応募フォーム</h2>
-<p class="text-outline text-sm tracking-widest uppercase">Contact Recruitment</p>
-</div>
-<form class="space-y-12">
-<div class="relative group">
-<input class="block w-full px-0 py-4 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary peer transition-all font-sans text-on-surface" id="name" name="name" placeholder=" " type="text"/>
-<label class="absolute text-sm text-outline duration-300 transform -translate-y-8 scale-75 top-4 z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8 peer-focus:text-primary font-headline italic" for="name">お名前 (Full Name)</label>
-</div>
-<div class="relative group">
-<input class="block w-full px-0 py-4 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary peer transition-all font-sans text-on-surface" id="email" name="email" placeholder=" " type="email"/>
-<label class="absolute text-sm text-outline duration-300 transform -translate-y-8 scale-75 top-4 z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8 peer-focus:text-primary font-headline italic" for="email">メールアドレス (Email)</label>
-</div>
-<div class="relative group">
-<textarea class="block w-full px-0 py-4 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary peer transition-all font-sans text-on-surface" id="message" name="message" placeholder=" " rows="4"></textarea>
-<label class="absolute text-sm text-outline duration-300 transform -translate-y-8 scale-75 top-4 z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8 peer-focus:text-primary font-headline italic" for="message">メッセージ (Message)</label>
-</div>
-<div class="pt-8 text-center">
-<button class="gold-gradient text-on-primary px-16 py-4 rounded-lg font-bold uppercase tracking-[0.2em] hover:shadow-[0_0_20px_rgba(242,202,80,0.3)] transition-all duration-300 active:scale-95" type="submit">
-              Submit Application
-            </button>
-</div>
-</form>
-</div>
-</section>
-</main>
-<!-- Footer Execution -->
-<footer class="bg-[#0d0d19] dark:bg-[#0d0d19] w-full py-12 px-8">
-<div class="nocturnal-divider mb-12"></div>
-<div class="flex flex-col items-center gap-6 max-w-screen-2xl mx-auto">
-<div class="font-serif text-lg text-[#f2ca50] tracking-[0.3em]">ATHENA</div>
-<div class="flex flex-wrap justify-center gap-8 text-[10px] font-sans uppercase tracking-widest">
-<a class="text-slate-600 hover:text-[#f2ca50] transition-opacity duration-300" href="#">Privacy Policy</a>
-<a class="text-slate-600 hover:text-[#f2ca50] transition-opacity duration-300" href="#">Terms of Service</a>
-<a class="text-slate-600 hover:text-[#f2ca50] transition-opacity duration-300" href="#">Diversity &amp; Inclusion</a>
-<a class="text-slate-600 hover:text-[#f2ca50] transition-opacity duration-300" href="#">Contact Recruitment</a>
-</div>
-<div class="text-slate-600 font-sans text-[10px] uppercase tracking-widest mt-4">
-        © 2024 ATHENA LUXURY CORP. ALL RIGHTS RESERVED.
+
+<!-- 3 Attractions -->
+<section class="py-24 lg:py-32 bg-dark-600">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="text-center mb-16 fade-up">
+      <h2 class="font-heading text-4xl lg:text-5xl font-bold text-warm tracking-wider">WHY ATHENA</h2>
+      <p class="text-warm-muted text-sm tracking-[2px] mt-3">ATHENAで働く魅力</p>
+      <div class="gold-line mx-auto mt-6"></div>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-8 fade-up">
+      <div class="bg-dark-500 card-border p-10 text-center gold-glow transition-all duration-500">
+        <span class="material-symbols-outlined text-5xl text-gold/70 mb-6">workspace_premium</span>
+        <h3 class="font-heading text-xl font-semibold text-warm mb-4">未経験歓迎</h3>
+        <p class="text-warm-muted text-sm font-light leading-[2]">カジノやバーの経験がなくても大丈夫。充実した研修制度で、ディーラースキルを一から学べます。</p>
       </div>
-</div>
+      <div class="bg-dark-500 card-border p-10 text-center gold-glow transition-all duration-500">
+        <span class="material-symbols-outlined text-5xl text-gold/70 mb-6">groups</span>
+        <h3 class="font-heading text-xl font-semibold text-warm mb-4">楽しい職場</h3>
+        <p class="text-warm-muted text-sm font-light leading-[2]">20代〜30代中心の活気あるチーム。エンターテインメントの最前線で働くやりがい。</p>
+      </div>
+      <div class="bg-dark-500 card-border p-10 text-center gold-glow transition-all duration-500">
+        <span class="material-symbols-outlined text-5xl text-gold/70 mb-6">trending_up</span>
+        <h3 class="font-heading text-xl font-semibold text-warm mb-4">スキルアップ</h3>
+        <p class="text-warm-muted text-sm font-light leading-[2]">接客スキル、ディーラー技術、マネジメント力。ここで身につくスキルは一生もの。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Photo -->
+<section class="py-24 lg:py-32 bg-dark-700">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="fade-up grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div class="overflow-hidden">
+        <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-587x425_webp_998df134-9eac-4cbb-a496-e4aa9f3e1a22.webp" alt="ATHENA Team" class="w-full h-[350px] object-cover">
+      </div>
+      <div>
+        <h2 class="font-heading text-4xl lg:text-5xl font-bold text-warm mb-4">OUR TEAM</h2>
+        <p class="text-warm-muted text-sm tracking-wider mb-4">チーム紹介</p>
+        <div class="gold-line mb-8"></div>
+        <p class="text-warm/70 text-[15px] font-light leading-[2] mb-4">ATHENAは「お客様に最高のエンターテインメント体験を」をモットーに、個性豊かなスタッフが活躍しています。</p>
+        <p class="text-warm/70 text-[15px] font-light leading-[2]">元アパレル店員、元飲食スタッフ、元エンジニアなど、様々なバックグラウンドを持つメンバーが在籍。多様な視点がATHENAの魅力を作っています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Job Details -->
+<section class="py-24 lg:py-32 bg-dark-600">
+  <div class="max-w-4xl mx-auto px-6 lg:px-12">
+    <div class="text-center mb-16 fade-up">
+      <h2 class="font-heading text-4xl lg:text-5xl font-bold text-warm tracking-wider">JOB DETAILS</h2>
+      <p class="text-warm-muted text-sm tracking-[2px] mt-3">募集要項</p>
+      <div class="gold-line mx-auto mt-6"></div>
+    </div>
+    <div class="fade-up space-y-0">
+      <div class="flex flex-col sm:flex-row border-b border-warm/5 py-6">
+        <p class="text-gold text-[11px] tracking-[3px] sm:w-40 flex-shrink-0 mb-2 sm:mb-0 sm:pt-0.5">職種</p>
+        <p class="text-warm text-sm font-light">カジノディーラー / ホールスタッフ</p>
+      </div>
+      <div class="flex flex-col sm:flex-row border-b border-warm/5 py-6">
+        <p class="text-gold text-[11px] tracking-[3px] sm:w-40 flex-shrink-0 mb-2 sm:mb-0 sm:pt-0.5">雇用形態</p>
+        <p class="text-warm text-sm font-light">正社員 / アルバイト</p>
+      </div>
+      <div class="flex flex-col sm:flex-row border-b border-warm/5 py-6">
+        <p class="text-gold text-[11px] tracking-[3px] sm:w-40 flex-shrink-0 mb-2 sm:mb-0 sm:pt-0.5">給与</p>
+        <div>
+          <p class="text-warm text-sm font-light">正社員：月給25万円〜35万円</p>
+          <p class="text-warm text-sm font-light mt-1">アルバイト：時給1,200円〜1,800円</p>
+          <p class="text-warm-muted text-xs font-light mt-2">※ 経験・能力により優遇</p>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row border-b border-warm/5 py-6">
+        <p class="text-gold text-[11px] tracking-[3px] sm:w-40 flex-shrink-0 mb-2 sm:mb-0 sm:pt-0.5">勤務時間</p>
+        <p class="text-warm text-sm font-light">12:30〜24:30（シフト制・実働8時間）</p>
+      </div>
+      <div class="flex flex-col sm:flex-row border-b border-warm/5 py-6">
+        <p class="text-gold text-[11px] tracking-[3px] sm:w-40 flex-shrink-0 mb-2 sm:mb-0 sm:pt-0.5">勤務地</p>
+        <p class="text-warm text-sm font-light">東京都豊島区池袋2-12-13 十二ビル4F<br>池袋駅西口から徒歩3分</p>
+      </div>
+      <div class="flex flex-col sm:flex-row border-b border-warm/5 py-6">
+        <p class="text-gold text-[11px] tracking-[3px] sm:w-40 flex-shrink-0 mb-2 sm:mb-0 sm:pt-0.5">待遇</p>
+        <div>
+          <p class="text-warm text-sm font-light">交通費支給（月2万円まで）</p>
+          <p class="text-warm text-sm font-light mt-1">社会保険完備（正社員）</p>
+          <p class="text-warm text-sm font-light mt-1">制服貸与</p>
+          <p class="text-warm text-sm font-light mt-1">まかない有り</p>
+          <p class="text-warm text-sm font-light mt-1">ディーラー研修制度</p>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row py-6">
+        <p class="text-gold text-[11px] tracking-[3px] sm:w-40 flex-shrink-0 mb-2 sm:mb-0 sm:pt-0.5">休日</p>
+        <p class="text-warm text-sm font-light">シフト制（月8日休み）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 求める人材 -->
+<section class="py-24 lg:py-32 bg-dark-700">
+  <div class="max-w-4xl mx-auto px-6 lg:px-12">
+    <div class="text-center mb-16 fade-up">
+      <h2 class="font-heading text-4xl lg:text-5xl font-bold text-warm tracking-wider">IDEAL CANDIDATE</h2>
+      <p class="text-warm-muted text-sm tracking-[2px] mt-3">求める人材</p>
+      <div class="gold-line mx-auto mt-6"></div>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-6 fade-up">
+      <div class="flex items-start gap-4 p-6 bg-dark-500 card-border">
+        <span class="material-symbols-outlined text-gold/50 text-xl mt-0.5 flex-shrink-0">check_circle</span>
+        <p class="text-warm text-sm font-light leading-[2]">人と接するのが好きな方</p>
+      </div>
+      <div class="flex items-start gap-4 p-6 bg-dark-500 card-border">
+        <span class="material-symbols-outlined text-gold/50 text-xl mt-0.5 flex-shrink-0">check_circle</span>
+        <p class="text-warm text-sm font-light leading-[2]">エンターテインメントに興味がある方</p>
+      </div>
+      <div class="flex items-start gap-4 p-6 bg-dark-500 card-border">
+        <span class="material-symbols-outlined text-gold/50 text-xl mt-0.5 flex-shrink-0">check_circle</span>
+        <p class="text-warm text-sm font-light leading-[2]">チームワークを大切にできる方</p>
+      </div>
+      <div class="flex items-start gap-4 p-6 bg-dark-500 card-border">
+        <span class="material-symbols-outlined text-gold/50 text-xl mt-0.5 flex-shrink-0">check_circle</span>
+        <p class="text-warm text-sm font-light leading-[2]">新しいことにチャレンジしたい方</p>
+      </div>
+      <div class="flex items-start gap-4 p-6 bg-dark-500 card-border">
+        <span class="material-symbols-outlined text-gold/50 text-xl mt-0.5 flex-shrink-0">check_circle</span>
+        <p class="text-warm text-sm font-light leading-[2]">清潔感のある方</p>
+      </div>
+      <div class="flex items-start gap-4 p-6 bg-dark-500 card-border">
+        <span class="material-symbols-outlined text-gold/50 text-xl mt-0.5 flex-shrink-0">check_circle</span>
+        <p class="text-warm text-sm font-light leading-[2]">18歳以上の方（高校生不可）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Apply CTA -->
+<section class="py-24 lg:py-32 bg-dark-600">
+  <div class="max-w-3xl mx-auto px-6 lg:px-12 text-center fade-up">
+    <div class="border border-gold/20 p-12 lg:p-16">
+      <h2 class="font-heading text-4xl lg:text-5xl font-bold text-warm mb-4">APPLY NOW</h2>
+      <p class="text-warm-muted text-sm tracking-[2px] mb-8">ご応募・お問い合わせ</p>
+      <div class="gold-line mx-auto mb-8"></div>
+      <p class="text-warm/60 text-[15px] font-light leading-[2] mb-10">まずはお気軽にお問い合わせください。<br>面接前に店舗見学も可能です。</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="contact.html" class="bg-gold text-dark-900 px-10 py-4 text-sm tracking-[3px] font-medium hover:bg-gold-light transition-all duration-300">応募フォーム</a>
+        <a href="tel:03-6903-1642" class="border border-gold/30 text-gold px-10 py-4 text-sm tracking-[3px] font-light hover:bg-gold/5 transition-all duration-300">03-6903-1642</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark-900 border-t border-gold/10 pt-20 pb-8">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div><img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-480x150_webp_30ea6a5b-683f-4d2d-88ec-a3de425c4baf.webp" alt="ATHENA" class="h-8 mb-5"><p class="text-warm-muted text-xs font-light leading-[2]">池袋西口最大級<br>健全営業のアミューズメントカジノバー</p></div>
+      <div><p class="text-gold text-[11px] tracking-[4px] mb-5">INFORMATION</p><div class="space-y-3"><a href="beginner.html" class="block text-warm-muted text-sm hover:text-gold transition-colors font-light">初めての方へ</a><a href="games.html" class="block text-warm-muted text-sm hover:text-gold transition-colors font-light">ゲーム紹介</a><a href="system.html" class="block text-warm-muted text-sm hover:text-gold transition-colors font-light">料金システム</a><a href="fooddrink.html" class="block text-warm-muted text-sm hover:text-gold transition-colors font-light">フード&ドリンク</a></div></div>
+      <div><p class="text-gold text-[11px] tracking-[4px] mb-5">LINKS</p><div class="space-y-3"><a href="event.html" class="block text-warm-muted text-sm hover:text-gold transition-colors font-light">イベント</a><a href="recruit.html" class="block text-warm-muted text-sm hover:text-gold transition-colors font-light">採用情報</a><a href="access.html" class="block text-warm-muted text-sm hover:text-gold transition-colors font-light">アクセス</a><a href="contact.html" class="block text-warm-muted text-sm hover:text-gold transition-colors font-light">お問い合わせ</a></div></div>
+      <div><p class="text-gold text-[11px] tracking-[4px] mb-5">CONTACT</p><p class="text-warm-muted text-sm font-light leading-[2]">東京都豊島区池袋2-12-13<br>十二ビル4F</p><p class="text-warm-muted text-sm font-light mt-3">03-6903-1642</p><p class="text-warm-muted text-sm font-light mt-1">13:00〜24:00（年中無休）</p></div>
+    </div>
+    <div class="flex items-center justify-center gap-8 mb-10">
+      <a href="https://twitter.com/athena_poker" target="_blank" class="text-warm-muted hover:text-gold transition-colors"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+      <a href="https://instagram.com/athena_ikebukuro" target="_blank" class="text-warm-muted hover:text-gold transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+      <a href="https://youtube.com/@athena414" target="_blank" class="text-warm-muted hover:text-gold transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
+    </div>
+    <p class="text-center text-warm-muted/30 text-xs tracking-[3px]">&copy; 2026 ATHENA. All Rights Reserved.</p>
+  </div>
 </footer>
-</body></html>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('nav-scrolled',window.scrollY>50)});
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
+const observer=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
