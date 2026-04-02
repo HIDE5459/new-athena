@@ -1,462 +1,345 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>初めての方へ | ATHENA - アミューズメントカジノバー 池袋</title>
-  <meta name="description" content="ATHENAが初めての方へ。入店からプレイまでの流れ、料金目安、無料講習のご案内。初心者の方も安心してお楽しみいただけます。">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            gold: '#c5b358', 'gold-light': '#d4c36a', 'gold-dark': '#b09a3e',
-            navy: '#0a0e1a', 'navy-light': '#131833', 'navy-mid': '#1a2040',
+
+<html class="dark" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#735c00",
+              "secondary": "#bfc2fb",
+              "on-error": "#690005",
+              "surface-container": "#1f1e2b",
+              "on-tertiary-fixed-variant": "#544600",
+              "secondary-fixed": "#e0e0ff",
+              "on-tertiary-container": "#534400",
+              "tertiary-fixed": "#ffe16d",
+              "on-secondary-container": "#aeb1e9",
+              "on-primary-fixed-variant": "#574500",
+              "on-primary-fixed": "#241a00",
+              "surface": "#12121f",
+              "primary-container": "#d4af37",
+              "surface-bright": "#383846",
+              "secondary-container": "#3f4273",
+              "on-tertiary-fixed": "#221b00",
+              "on-primary": "#3c2f00",
+              "error-container": "#93000a",
+              "on-error-container": "#ffdad6",
+              "outline": "#99907c",
+              "surface-tint": "#e9c349",
+              "primary-fixed": "#ffe088",
+              "tertiary-fixed-dim": "#e9c400",
+              "tertiary-container": "#d2b100",
+              "surface-container-lowest": "#0d0d19",
+              "surface-container-low": "#1a1a27",
+              "inverse-surface": "#e3e0f3",
+              "error": "#ffb4ab",
+              "on-background": "#e3e0f3",
+              "surface-variant": "#343341",
+              "on-secondary-fixed-variant": "#3f4273",
+              "surface-container-highest": "#343341",
+              "on-surface": "#e3e0f3",
+              "surface-dim": "#12121f",
+              "on-tertiary": "#3a3000",
+              "inverse-on-surface": "#2f2f3d",
+              "background": "#12121f",
+              "on-primary-container": "#554300",
+              "surface-container-high": "#292936",
+              "on-surface-variant": "#d0c5af",
+              "secondary-fixed-dim": "#bfc2fb",
+              "primary": "#f2ca50",
+              "on-secondary-fixed": "#131645",
+              "outline-variant": "#4d4635",
+              "tertiary": "#f2cc00",
+              "primary-fixed-dim": "#e9c349",
+              "on-secondary": "#282c5b"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif JP", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
           },
-          fontFamily: { sans: ['Noto Sans JP', 'sans-serif'], serif: ['Noto Serif JP', 'serif'] }
-        }
+        },
       }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
-    body { font-family: 'Noto Sans JP', sans-serif; }
-    .font-serif { font-family: 'Noto Serif JP', serif; }
-    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(197,179,88,0.15); }
-    html { scroll-behavior: smooth; }
-    .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
-    .mobile-menu.open { transform: translateX(0); }
-  </style>
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(31, 30, 43, 0.6);
+        backdrop-filter: blur(24px);
+      }
+      .gold-gradient-text {
+        background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .gold-rim {
+        border-top: 1px solid rgba(242, 202, 80, 0.3);
+      }
+    </style>
 </head>
-<body class="bg-navy text-gray-200">
-
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full z-50 bg-navy/95 backdrop-blur-md border-b border-gold/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-540x462_webp_5555fae8-c7c6-4e61-be8f-8b890bce650a.webp" alt="ATHENA" class="h-10 w-auto">
-          <span class="text-gold font-serif font-bold text-lg hidden sm:block">ATHENA</span>
-        </a>
-        <div class="hidden lg:flex items-center space-x-6 text-sm">
-          <a href="index.html" class="hover:text-gold transition">TOP</a>
-          <a href="beginner.html" class="text-gold hover:text-gold-light transition">初めての方へ</a>
-          <a href="games.html" class="hover:text-gold transition">ゲーム紹介</a>
-          <a href="system.html" class="hover:text-gold transition">料金システム</a>
-          <a href="fooddrink.html" class="hover:text-gold transition">フード&ドリンク</a>
-          <a href="event.html" class="hover:text-gold transition">イベント</a>
-          <a href="recruit.html" class="hover:text-gold transition">採用情報</a>
-          <a href="access.html" class="hover:text-gold transition">アクセス</a>
-          <a href="contact.html" class="bg-gold text-navy px-4 py-2 rounded hover:bg-gold-light transition font-medium">予約する</a>
-        </div>
-        <button id="menu-toggle" class="lg:hidden text-gold"><span class="material-symbols-outlined text-3xl">menu</span></button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-72 bg-navy-light z-50 border-l border-gold/20 p-6 pt-20">
-    <button id="menu-close" class="absolute top-5 right-5 text-gold"><span class="material-symbols-outlined text-3xl">close</span></button>
-    <div class="flex flex-col space-y-4">
-      <a href="index.html" class="py-2 border-b border-gold/10 hover:text-gold transition">TOP</a>
-      <a href="beginner.html" class="text-gold font-medium py-2 border-b border-gold/10">初めての方へ</a>
-      <a href="games.html" class="py-2 border-b border-gold/10 hover:text-gold transition">ゲーム紹介</a>
-      <a href="system.html" class="py-2 border-b border-gold/10 hover:text-gold transition">料金システム</a>
-      <a href="fooddrink.html" class="py-2 border-b border-gold/10 hover:text-gold transition">フード&ドリンク</a>
-      <a href="event.html" class="py-2 border-b border-gold/10 hover:text-gold transition">イベント</a>
-      <a href="recruit.html" class="py-2 border-b border-gold/10 hover:text-gold transition">採用情報</a>
-      <a href="access.html" class="py-2 border-b border-gold/10 hover:text-gold transition">アクセス</a>
-      <a href="contact.html" class="bg-gold text-navy px-4 py-3 rounded text-center font-medium mt-4 hover:bg-gold-light transition">予約する</a>
-    </div>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary">
+<!-- Shared Navigation -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(10,14,26,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(197,179,88,0.2);padding:12px 24px;display:flex;justify-content:space-between;align-items:center;font-family:'Noto Sans JP',sans-serif;">
+  <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+    <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-480x150_webp_30ea6a5b-683f-4d2d-88ec-a3de425c4baf.webp" alt="ATHENA" style="height:30px;">
+  </a>
+  <div class="desktop-nav" style="display:flex;gap:24px;align-items:center;">
+    <a href="index.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">TOP</a>
+    <a href="beginner.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">初めての方へ</a>
+    <a href="games.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">ゲーム紹介</a>
+    <a href="system.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">料金システム</a>
+    <a href="fooddrink.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">フード＆ドリンク</a>
+    <a href="event.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">イベント</a>
+    <a href="recruit.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">採用情報</a>
+    <a href="access.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">アクセス</a>
+    <a href="contact.html" style="background:#c5b358;color:#0a0e1a;padding:8px 20px;border-radius:4px;text-decoration:none;font-size:13px;font-weight:700;">予約する</a>
   </div>
-  <div id="menu-overlay" class="fixed inset-0 bg-black/60 z-40 hidden"></div>
+  <button id="hamburger-btn" style="display:none;background:none;border:none;color:#c5b358;font-size:28px;cursor:pointer;font-family:Material Symbols Outlined;" onclick="document.getElementById('sp-menu').classList.add('open');document.getElementById('sp-overlay').classList.add('open');">menu</button>
+</nav>
+<style>
+@media(max-width:990px){.desktop-nav{display:none!important;}#hamburger-btn{display:block!important;}}
+#sp-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:99998;}
+#sp-overlay.open{display:block;}
+#sp-menu{position:fixed;top:0;right:0;width:280px;height:100vh;background:#0a0e1a;z-index:99999;transform:translateX(100%);transition:transform 0.3s;padding:60px 30px;display:flex;flex-direction:column;gap:4px;border-left:1px solid rgba(197,179,88,0.3);}
+#sp-menu.open{transform:translateX(0);}
+#sp-menu a{color:#e0dcd0;text-decoration:none;font-size:15px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-family:'Noto Sans JP',sans-serif;}
+#sp-menu a:hover{color:#c5b358;}
+#sp-menu .close-btn{position:absolute;top:16px;right:16px;background:none;border:none;color:#c5b358;font-size:28px;cursor:pointer;font-family:Material Symbols Outlined;}
+</style>
+<div id="sp-overlay" onclick="document.getElementById('sp-menu').classList.remove('open');this.classList.remove('open');"></div>
+<div id="sp-menu">
+  <button class="close-btn" onclick="document.getElementById('sp-menu').classList.remove('open');document.getElementById('sp-overlay').classList.remove('open');">close</button>
+  <a href="index.html">TOP</a>
+  <a href="beginner.html">初めての方へ</a>
+  <a href="games.html">ゲーム紹介</a>
+  <a href="system.html">料金システム</a>
+  <a href="fooddrink.html">フード＆ドリンク</a>
+  <a href="event.html">イベント</a>
+  <a href="recruit.html">採用情報</a>
+  <a href="access.html">アクセス</a>
+  <a href="contact.html">お問い合わせ</a>
+</div>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<!-- End Shared Navigation -->
 
-  <!-- Page Hero -->
-  <section class="pt-28 pb-16 bg-gradient-to-b from-navy-mid to-navy">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <p class="text-gold text-sm font-medium tracking-widest mb-2">FOR BEGINNERS</p>
-      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">初めての方へ</h1>
-      <p class="text-gray-300 text-lg leading-relaxed">カジノゲームが初めてでも大丈夫。<br>ATHENAは初心者の方も安心して楽しめるお店です。</p>
-    </div>
-  </section>
-
-  <!-- Important Points -->
-  <section class="py-16 bg-navy">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gold/10 border border-gold/30 rounded-2xl p-8 md:p-10">
-        <h2 class="font-serif text-2xl font-bold text-white mb-6 text-center">ATHENAが初めてでも安心な理由</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-3">
-              <span class="material-symbols-outlined text-gold text-3xl">school</span>
-            </div>
-            <h3 class="font-bold text-white mb-2">毎日無料講習あり</h3>
-            <p class="text-gray-300 text-sm">ルールが分からなくても、スタッフが丁寧にお教えします。</p>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-3">
-              <span class="material-symbols-outlined text-gold text-3xl">person</span>
-            </div>
-            <h3 class="font-bold text-white mb-2">お一人様大歓迎</h3>
-            <p class="text-gray-300 text-sm">お一人でのご来店も多数。スタッフがサポートします。</p>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-3">
-              <span class="material-symbols-outlined text-gold text-3xl">verified</span>
-            </div>
-            <h3 class="font-bold text-white mb-2">健全営業</h3>
-            <p class="text-gray-300 text-sm">賭博ではありません。チップに換金性はございません。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Step by Step Guide -->
-  <section class="py-20 bg-navy-light">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <p class="text-gold text-sm font-medium tracking-widest mb-2">HOW TO PLAY</p>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">ご利用の流れ</h2>
-      </div>
-      <div class="space-y-0 relative">
-        <!-- Vertical line -->
-        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gold/20 -translate-x-1/2"></div>
-
-        <!-- Step 1 -->
-        <div class="md:flex items-center mb-12">
-          <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-            <h3 class="font-serif text-xl font-bold text-white">入店</h3>
-            <p class="text-gray-300 mt-2">池袋駅西口から徒歩3分。十二ビル4Fまでエレベーターでお上がりください。</p>
-          </div>
-          <div class="hidden md:flex w-12 h-12 bg-gold rounded-full items-center justify-center z-10 mx-auto flex-shrink-0">
-            <span class="text-navy font-bold">1</span>
-          </div>
-          <div class="md:w-1/2 md:pl-12">
-            <div class="md:hidden w-10 h-10 bg-gold rounded-full flex items-center justify-center mb-3">
-              <span class="text-navy font-bold">1</span>
-            </div>
-            <span class="material-symbols-outlined text-gold text-4xl">door_open</span>
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="md:flex items-center mb-12">
-          <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-1 mb-4 md:mb-0">
-            <span class="material-symbols-outlined text-gold text-4xl md:float-right">how_to_reg</span>
-          </div>
-          <div class="hidden md:flex w-12 h-12 bg-gold rounded-full items-center justify-center z-10 mx-auto flex-shrink-0 order-2">
-            <span class="text-navy font-bold">2</span>
-          </div>
-          <div class="md:w-1/2 md:pl-12 order-3">
-            <div class="md:hidden w-10 h-10 bg-gold rounded-full flex items-center justify-center mb-3">
-              <span class="text-navy font-bold">2</span>
-            </div>
-            <h3 class="font-serif text-xl font-bold text-white">受付</h3>
-            <p class="text-gray-300 mt-2">スタッフがお迎えします。初めての方はお気軽にお伝えください。システムを丁寧にご説明します。</p>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="md:flex items-center mb-12">
-          <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-            <h3 class="font-serif text-xl font-bold text-white">チップ購入</h3>
-            <p class="text-gray-300 mt-2">エントリーフィー(¥1,000/1ドリンク付き)をお支払いいただき、お好きな金額でチップをご購入ください。</p>
-          </div>
-          <div class="hidden md:flex w-12 h-12 bg-gold rounded-full items-center justify-center z-10 mx-auto flex-shrink-0">
-            <span class="text-navy font-bold">3</span>
-          </div>
-          <div class="md:w-1/2 md:pl-12">
-            <div class="md:hidden w-10 h-10 bg-gold rounded-full flex items-center justify-center mb-3">
-              <span class="text-navy font-bold">3</span>
-            </div>
-            <span class="material-symbols-outlined text-gold text-4xl">monetization_on</span>
-          </div>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="md:flex items-center mb-12">
-          <div class="md:w-1/2 md:pr-12 md:text-right order-1 mb-4 md:mb-0">
-            <span class="material-symbols-outlined text-gold text-4xl md:float-right">casino</span>
-          </div>
-          <div class="hidden md:flex w-12 h-12 bg-gold rounded-full items-center justify-center z-10 mx-auto flex-shrink-0 order-2">
-            <span class="text-navy font-bold">4</span>
-          </div>
-          <div class="md:w-1/2 md:pl-12 order-3">
-            <div class="md:hidden w-10 h-10 bg-gold rounded-full flex items-center justify-center mb-3">
-              <span class="text-navy font-bold">4</span>
-            </div>
-            <h3 class="font-serif text-xl font-bold text-white">ゲーム選択</h3>
-            <p class="text-gray-300 mt-2">テキサスホールデム、バカラ、ブラックジャックなどお好きなゲームをお選びください。初心者にはテキサスホールデムがおすすめです。</p>
-          </div>
-        </div>
-
-        <!-- Step 5 -->
-        <div class="md:flex items-center mb-12">
-          <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-            <h3 class="font-serif text-xl font-bold text-white">プレイ</h3>
-            <p class="text-gray-300 mt-2">ディーラーやスタッフがサポートしますので、ルールが分からなくても安心。ドリンクを楽しみながらプレイしましょう。</p>
-          </div>
-          <div class="hidden md:flex w-12 h-12 bg-gold rounded-full items-center justify-center z-10 mx-auto flex-shrink-0">
-            <span class="text-navy font-bold">5</span>
-          </div>
-          <div class="md:w-1/2 md:pl-12">
-            <div class="md:hidden w-10 h-10 bg-gold rounded-full flex items-center justify-center mb-3">
-              <span class="text-navy font-bold">5</span>
-            </div>
-            <span class="material-symbols-outlined text-gold text-4xl">playing_cards</span>
-          </div>
-        </div>
-
-        <!-- Step 6 -->
-        <div class="md:flex items-center">
-          <div class="md:w-1/2 md:pr-12 md:text-right order-1 mb-4 md:mb-0">
-            <span class="material-symbols-outlined text-gold text-4xl md:float-right">waving_hand</span>
-          </div>
-          <div class="hidden md:flex w-12 h-12 bg-gold rounded-full items-center justify-center z-10 mx-auto flex-shrink-0 order-2">
-            <span class="text-navy font-bold">6</span>
-          </div>
-          <div class="md:w-1/2 md:pl-12 order-3">
-            <div class="md:hidden w-10 h-10 bg-gold rounded-full flex items-center justify-center mb-3">
-              <span class="text-navy font-bold">6</span>
-            </div>
-            <h3 class="font-serif text-xl font-bold text-white">退店</h3>
-            <p class="text-gray-300 mt-2">お好きな時間に退店可能です。チップはカウンターにてお戻しください。またのご来店をお待ちしております。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Budget Section -->
-  <section class="py-20 bg-navy">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <p class="text-gold text-sm font-medium tracking-widest mb-2">BUDGET</p>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">ご予算の目安</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="card-hover bg-navy-mid border border-gold/10 rounded-xl p-8 text-center">
-          <span class="text-gold text-sm font-medium tracking-wider">TRIAL</span>
-          <h3 class="font-serif text-xl font-bold text-white mt-2 mb-4">お試しプラン</h3>
-          <p class="text-gold text-4xl font-bold mb-2">¥3,000<span class="text-lg">〜</span></p>
-          <p class="text-gray-400 text-sm mb-6">1ドリンク付き</p>
-          <ul class="text-left space-y-2 text-sm text-gray-300">
-            <li class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">check</span>エントリーフィー ¥1,000</li>
-            <li class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">check</span>チップ ¥2,000分</li>
-            <li class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">check</span>約1〜2時間プレイ</li>
-          </ul>
-          <div class="mt-6 bg-gold/10 rounded-lg px-4 py-2">
-            <span class="text-gold text-sm font-medium">初めての方におすすめ</span>
-          </div>
-        </div>
-        <div class="card-hover bg-navy-mid border-2 border-gold rounded-xl p-8 text-center relative">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-navy px-4 py-1 rounded-full text-xs font-bold">人気No.1</div>
-          <span class="text-gold text-sm font-medium tracking-wider">STANDARD</span>
-          <h3 class="font-serif text-xl font-bold text-white mt-2 mb-4">スタンダード</h3>
-          <p class="text-gold text-4xl font-bold mb-2">¥5,000<span class="text-lg">〜</span></p>
-          <p class="text-gray-400 text-sm mb-6">1ドリンク付き</p>
-          <ul class="text-left space-y-2 text-sm text-gray-300">
-            <li class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">check</span>エントリーフィー ¥1,000</li>
-            <li class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">check</span>チップ ¥4,000分</li>
-            <li class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">check</span>約2〜3時間プレイ</li>
-          </ul>
-          <div class="mt-6 bg-gold/10 rounded-lg px-4 py-2">
-            <span class="text-gold text-sm font-medium">じっくり楽しみたい方に</span>
-          </div>
-        </div>
-        <div class="card-hover bg-navy-mid border border-gold/10 rounded-xl p-8 text-center">
-          <span class="text-gold text-sm font-medium tracking-wider">PREMIUM</span>
-          <h3 class="font-serif text-xl font-bold text-white mt-2 mb-4">がっつりプラン</h3>
-          <p class="text-gold text-4xl font-bold mb-2">¥10,000<span class="text-lg">〜</span></p>
-          <p class="text-gray-400 text-sm mb-6">1ドリンク付き</p>
-          <ul class="text-left space-y-2 text-sm text-gray-300">
-            <li class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">check</span>エントリーフィー ¥1,000</li>
-            <li class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">check</span>チップ ¥9,000分</li>
-            <li class="flex items-center"><span class="material-symbols-outlined text-gold mr-2 text-lg">check</span>半日〜1日たっぷり</li>
-          </ul>
-          <div class="mt-6 bg-gold/10 rounded-lg px-4 py-2">
-            <span class="text-gold text-sm font-medium">本格的に楽しみたい方に</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Free Lesson -->
-  <section class="py-20 bg-navy-light">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="bg-gradient-to-br from-gold/10 to-gold/5 border border-gold/30 rounded-2xl p-10 md:p-14">
-        <span class="material-symbols-outlined text-gold text-5xl mb-4">school</span>
-        <h2 class="font-serif text-3xl font-bold text-white mb-4">無料講習のご案内</h2>
-        <p class="text-gray-300 text-lg leading-relaxed mb-6">ATHENAでは毎日無料でカジノゲームの講習を実施しています。<br>テキサスホールデムのルール、ゲームの進め方、チップの使い方まで<br class="hidden md:block">スタッフが丁寧にお教えします。</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-8">
-          <div class="bg-navy/50 rounded-lg p-4">
-            <p class="text-gold font-bold">開催時間</p>
-            <p class="text-gray-300">毎日 13:00〜</p>
-          </div>
-          <div class="bg-navy/50 rounded-lg p-4">
-            <p class="text-gold font-bold">所要時間</p>
-            <p class="text-gray-300">約30分〜1時間</p>
-          </div>
-        </div>
-        <p class="text-gray-400 text-sm mb-6">※予約不要・参加無料</p>
-        <a href="contact.html" class="inline-block bg-gold text-navy px-10 py-4 rounded-lg text-lg font-bold hover:bg-gold-light transition">お問い合わせ・ご予約</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="py-20 bg-navy">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <p class="text-gold text-sm font-medium tracking-widest mb-2">FAQ</p>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">よくあるご質問</h2>
-      </div>
-      <div class="space-y-4">
-        <div class="bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" onclick="this.parentElement.classList.toggle('open')">
-            <span class="font-medium text-white">カジノゲームは初めてですが大丈夫ですか？</span>
-            <span class="material-symbols-outlined text-gold transition-transform">expand_more</span>
-          </button>
-          <div class="faq-answer px-6 pb-5 hidden">
-            <p class="text-gray-300">はい、もちろん大丈夫です。お客様の多くが初心者からスタートされています。毎日無料講習を実施しており、スタッフがルールから丁寧にお教えしますので、安心してご来店ください。</p>
-          </div>
-        </div>
-        <div class="bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" onclick="this.parentElement.classList.toggle('open')">
-            <span class="font-medium text-white">一人で行っても楽しめますか？</span>
-            <span class="material-symbols-outlined text-gold transition-transform">expand_more</span>
-          </button>
-          <div class="faq-answer px-6 pb-5 hidden">
-            <p class="text-gray-300">はい、お一人様でのご来店も大歓迎です。テーブルに着けば他のお客様と一緒にゲームを楽しめますし、スタッフもサポートいたします。お一人で来られるお客様も多いのでご安心ください。</p>
-          </div>
-        </div>
-        <div class="bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" onclick="this.parentElement.classList.toggle('open')">
-            <span class="font-medium text-white">賭博ではないのですか？</span>
-            <span class="material-symbols-outlined text-gold transition-transform">expand_more</span>
-          </button>
-          <div class="faq-answer px-6 pb-5 hidden">
-            <p class="text-gray-300">ATHENAはアミューズメント施設です。チップに換金性はなく、賭博には該当しません。ゲームの楽しさやスキルアップを純粋にお楽しみいただける健全な営業を行っております。</p>
-          </div>
-        </div>
-        <div class="bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" onclick="this.parentElement.classList.toggle('open')">
-            <span class="font-medium text-white">ドレスコードはありますか？</span>
-            <span class="material-symbols-outlined text-gold transition-transform">expand_more</span>
-          </button>
-          <div class="faq-answer px-6 pb-5 hidden">
-            <p class="text-gray-300">特にドレスコードはございません。カジュアルな服装でお気軽にお越しください。</p>
-          </div>
-        </div>
-        <div class="bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" onclick="this.parentElement.classList.toggle('open')">
-            <span class="font-medium text-white">予約は必要ですか？</span>
-            <span class="material-symbols-outlined text-gold transition-transform">expand_more</span>
-          </button>
-          <div class="faq-answer px-6 pb-5 hidden">
-            <p class="text-gray-300">予約なしでもご来店いただけます。ただし、週末やイベント時は混雑する場合がございますので、事前にお電話（03-6903-1642）でのご予約をおすすめいたします。</p>
-          </div>
-        </div>
-        <div class="bg-navy-mid border border-gold/10 rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" onclick="this.parentElement.classList.toggle('open')">
-            <span class="font-medium text-white">年齢制限はありますか？</span>
-            <span class="material-symbols-outlined text-gold transition-transform">expand_more</span>
-          </button>
-          <div class="faq-answer px-6 pb-5 hidden">
-            <p class="text-gray-300">18歳以上の方がご利用いただけます（高校生不可）。ご来店時に年齢確認をさせていただく場合がございますので、身分証明書をお持ちください。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-16 bg-gradient-to-b from-navy to-navy-light">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">まずはお気軽にご来店ください</h2>
-      <p class="text-gray-300 mb-8">スタッフ一同、心よりお待ちしております。</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="contact.html" class="bg-gold text-navy px-8 py-3 rounded-lg font-bold hover:bg-gold-light transition">予約する</a>
-        <a href="tel:03-6903-1642" class="border border-gold text-gold px-8 py-3 rounded-lg font-bold hover:bg-gold/10 transition">
-          <span class="material-symbols-outlined align-middle mr-1">phone</span>03-6903-1642
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-navy border-t border-gold/10 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        <div>
-          <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-540x462_webp_5555fae8-c7c6-4e61-be8f-8b890bce650a.webp" alt="ATHENA" class="h-16 w-auto mb-4">
-          <p class="text-gray-400 text-sm leading-relaxed">池袋西口最大級<br>アミューズメントカジノバー</p>
-          <div class="flex space-x-4 mt-4">
-            <a href="https://twitter.com/athena_poker" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-x-twitter text-xl"></i></a>
-            <a href="https://instagram.com/athena_ikebukuro" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-instagram text-xl"></i></a>
-            <a href="https://youtube.com/@athena414" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-youtube text-xl"></i></a>
-          </div>
-        </div>
-        <div>
-          <h4 class="text-gold font-medium mb-4">INFORMATION</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="beginner.html" class="text-gray-400 hover:text-gold transition">初めての方へ</a></li>
-            <li><a href="games.html" class="text-gray-400 hover:text-gold transition">ゲーム紹介</a></li>
-            <li><a href="system.html" class="text-gray-400 hover:text-gold transition">料金システム</a></li>
-            <li><a href="fooddrink.html" class="text-gray-400 hover:text-gold transition">フード&ドリンク</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-gold font-medium mb-4">LINKS</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="event.html" class="text-gray-400 hover:text-gold transition">イベント</a></li>
-            <li><a href="recruit.html" class="text-gray-400 hover:text-gold transition">採用情報</a></li>
-            <li><a href="access.html" class="text-gray-400 hover:text-gold transition">アクセス</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-gold transition">お問い合わせ</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-gold font-medium mb-4">CONTACT</h4>
-          <p class="text-gray-400 text-sm mb-2">東京都豊島区池袋2-12-13<br>十二ビル4F</p>
-          <p class="text-gray-400 text-sm mb-2">TEL: <a href="tel:03-6903-1642" class="hover:text-gold transition">03-6903-1642</a></p>
-          <p class="text-gray-400 text-sm">営業時間: 13:00〜24:00</p>
-        </div>
-      </div>
-      <div class="border-t border-gold/10 pt-8 text-center">
-        <p class="text-gray-500 text-sm">&copy; 2024 ATHENA - アミューズメントカジノバー 池袋. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Mobile menu
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuClose = document.getElementById('menu-close');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuOverlay = document.getElementById('menu-overlay');
-    function openMenu() { mobileMenu.classList.add('open'); menuOverlay.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
-    function closeMenu() { mobileMenu.classList.remove('open'); menuOverlay.classList.add('hidden'); document.body.style.overflow = ''; }
-    menuToggle.addEventListener('click', openMenu);
-    menuClose.addEventListener('click', closeMenu);
-    menuOverlay.addEventListener('click', closeMenu);
-
-    // FAQ toggle
-    document.querySelectorAll('.faq-toggle').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const answer = btn.nextElementSibling;
-        const icon = btn.querySelector('.material-symbols-outlined');
-        answer.classList.toggle('hidden');
-        icon.style.transform = answer.classList.contains('hidden') ? '' : 'rotate(180deg)';
-      });
-    });
-  </script>
-</body>
-</html>
+<!-- TopNavBar -->
+<nav class="bg-[#12121f] dark:bg-[#12121f] docked full-width top-0 z-50 border-b border-[#f2ca50]/20 shadow-[0_4px_24px_rgba(40,44,91,0.08)] flex justify-between items-center w-full px-8 py-4 fixed">
+<div class="text-2xl font-bold tracking-tighter text-[#f2ca50] font-headline uppercase">ATHENA</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-noto-serif uppercase tracking-tight text-white/70 hover:text-[#f2ca50] transition-colors duration-300" href="#">Lounge</a>
+<a class="font-noto-serif uppercase tracking-tight text-white/70 hover:text-[#f2ca50] transition-colors duration-300" href="#">Gaming</a>
+<a class="font-noto-serif uppercase tracking-tight text-white/70 hover:text-[#f2ca50] transition-colors duration-300" href="#">Rewards</a>
+<a class="font-noto-serif uppercase tracking-tight text-white/70 hover:text-[#f2ca50] transition-colors duration-300" href="#">Concierge</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 font-bold hover:shadow-[0_0_20px_rgba(242,202,80,0.3)] transition-all duration-300 scale-95 active:scale-90">Join Club</button>
+<span class="material-symbols-outlined text-[#f2ca50] cursor-pointer">account_circle</span>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 scale-105" data-alt="Luxurious dark casino interior with soft warm lighting, golden accents on card tables, and a blurred background of a premium lounge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ57hw-TnkPjU8SRMQ4DriMBIuvwXyI-j6gAv5Xu_6m7ti70piHWzMI9QHJKZJValiQAQwyQ_bQLmp-uunox-18uesk7jbVoYeCRJYV9p4ConflkwlKacpMWQUf0-rzDh9SHxfmusg_VUdXJUfKYDniBNStFJh0iy5mMpBupRu7G9ZoHZwAEXPMmdsDaSvi5da2a600_5WAYj6VgrRvz7K4KMFtG-17EybMcc1IZulGnu3AjJid87FCDLiSV7YEn4R4HlmHa8YgnY"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface/60 to-surface"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<p class="font-headline tracking-[0.4em] text-primary mb-6 text-sm md:text-base animate-pulse">WELCOME TO THE SANCTUARY</p>
+<h1 class="font-headline text-5xl md:text-8xl font-black mb-8 tracking-tighter gold-gradient-text leading-tight">初めての方へ</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light">
+                ATHENAへようこそ。ここは、日常を忘れさせる至福のひとときと、高揚感が交差する大人の社交場。カジノが初めての方でも安心して愉しめるよう、私たちがエスコートいたします。
+            </p>
+<div class="mt-12">
+<span class="material-symbols-outlined text-primary text-4xl animate-bounce">expand_more</span>
+</div>
+</div>
+</section>
+<main class="relative z-10 -mt-20">
+<!-- Step-by-Step Guide -->
+<section class="max-w-7xl mx-auto px-6 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">
+<!-- Step 1 -->
+<div class="group relative surface-container p-8 rounded-lg gold-rim transition-all duration-300 hover:-translate-y-2 bg-surface-container">
+<div class="absolute -top-6 left-8 bg-primary text-on-primary w-12 h-12 flex items-center justify-center font-bold text-xl rounded-sm">01</div>
+<div class="mt-4 mb-6">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">door_front</span>
+</div>
+<h3 class="font-headline text-2xl mb-4 text-primary">入店</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">重厚な扉の先には、別世界の静寂と熱狂が待っています。スマートカジュアルな装いで、非日常への第一歩を。</p>
+</div>
+<!-- Step 2 -->
+<div class="group relative surface-container p-8 rounded-lg gold-rim transition-all duration-300 hover:-translate-y-2 bg-surface-container-high">
+<div class="absolute -top-6 left-8 bg-primary text-on-primary w-12 h-12 flex items-center justify-center font-bold text-xl rounded-sm">02</div>
+<div class="mt-4 mb-6">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">badge</span>
+</div>
+<h3 class="font-headline text-2xl mb-4 text-primary">受付</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">コンシェルジュが笑顔でお迎えします。初めての方はその旨をお伝えください。メンバーシップのご案内をいたします。</p>
+</div>
+<!-- Step 3 -->
+<div class="group relative surface-container p-8 rounded-lg gold-rim transition-all duration-300 hover:-translate-y-2 bg-surface-container">
+<div class="absolute -top-6 left-8 bg-primary text-on-primary w-12 h-12 flex items-center justify-center font-bold text-xl rounded-sm">03</div>
+<div class="mt-4 mb-6">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<h3 class="font-headline text-2xl mb-4 text-primary">チップ購入</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">まずはチップのご準備を。カウンターまたはテーブルにて承ります。ご予算に合わせたプランをご提案します。</p>
+</div>
+<!-- Step 4 -->
+<div class="group relative surface-container p-8 rounded-lg gold-rim transition-all duration-300 hover:-translate-y-2 bg-surface-container-high">
+<div class="absolute -top-6 left-8 bg-primary text-on-primary w-12 h-12 flex items-center justify-center font-bold text-xl rounded-sm">04</div>
+<div class="mt-4 mb-6">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">style</span>
+</div>
+<h3 class="font-headline text-2xl mb-4 text-primary">ゲーム選択</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">バカラ、ブラックジャック、ルーレット。その時の気分に合わせて、お好きなテーブルへお進みください。</p>
+</div>
+<!-- Step 5 -->
+<div class="group relative surface-container p-8 rounded-lg gold-rim transition-all duration-300 hover:-translate-y-2 bg-surface-container">
+<div class="absolute -top-6 left-8 bg-primary text-on-primary w-12 h-12 flex items-center justify-center font-bold text-xl rounded-sm">05</div>
+<div class="mt-4 mb-6">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">playing_cards</span>
+</div>
+<h3 class="font-headline text-2xl mb-4 text-primary">プレイ</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">いよいよゲームの始まりです。ディーラーや他のお客様との交流も、ATHENAならではの醍醐味です。</p>
+</div>
+<!-- Step 6 -->
+<div class="group relative surface-container p-8 rounded-lg gold-rim transition-all duration-300 hover:-translate-y-2 bg-surface-container-high">
+<div class="absolute -top-6 left-8 bg-primary text-on-primary w-12 h-12 flex items-center justify-center font-bold text-xl rounded-sm">06</div>
+<div class="mt-4 mb-6">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">logout</span>
+</div>
+<h3 class="font-headline text-2xl mb-4 text-primary">退店</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">余韻を楽しみながら、出口へ。お持ちのチップは次回のプレイに充てることも、保管することも可能です。</p>
+</div>
+</div>
+</section>
+<!-- Budget Section -->
+<section class="bg-surface-container-lowest py-32">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl mb-4 gold-gradient-text">ご予算の目安</h2>
+<div class="h-1 w-24 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Trial -->
+<div class="bg-surface border border-primary/20 p-10 rounded-lg text-center transition-all hover:border-primary/60 hover:bg-surface-container">
+<h4 class="font-headline text-xl mb-6 text-on-surface-variant">お試し</h4>
+<div class="text-5xl font-extrabold text-primary mb-8 font-label">3,000<span class="text-lg ml-2">円</span></div>
+<ul class="text-sm text-left space-y-4 text-white/60 mb-10">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> ウェルカムドリンク1杯</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> お試しチップ 500枚</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> ルール説明ガイド</li>
+</ul>
+<button class="w-full py-3 border border-primary text-primary hover:bg-primary hover:text-on-primary transition-all">プランを選択</button>
+</div>
+<!-- Standard -->
+<div class="bg-surface-container border-2 border-primary p-10 rounded-lg text-center relative scale-105 shadow-[0_0_40px_rgba(242,202,80,0.1)]">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 text-xs font-bold tracking-widest uppercase">Popular</div>
+<h4 class="font-headline text-xl mb-6 text-primary">スタンダード</h4>
+<div class="text-5xl font-extrabold text-primary mb-8 font-label">5,000<span class="text-lg ml-2">円</span></div>
+<ul class="text-sm text-left space-y-4 text-on-surface mb-10">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> プレミアムドリンク2杯</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> スタンダードチップ 1,000枚</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> 初心者専用レクチャー参加券</li>
+</ul>
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold transition-all hover:opacity-90">プランを選択</button>
+</div>
+<!-- Full -->
+<div class="bg-surface border border-primary/20 p-10 rounded-lg text-center transition-all hover:border-primary/60 hover:bg-surface-container">
+<h4 class="font-headline text-xl mb-6 text-on-surface-variant">がっつり</h4>
+<div class="text-5xl font-extrabold text-primary mb-8 font-label">10,000<span class="text-lg ml-2">円</span></div>
+<ul class="text-sm text-left space-y-4 text-white/60 mb-10">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> シャンパン含むフリーフロー</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> VIPチップ 2,500枚</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check</span> 専属ディーラーレクチャー</li>
+</ul>
+<button class="w-full py-3 border border-primary text-primary hover:bg-primary hover:text-on-primary transition-all">プランを選択</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Free Lesson Section -->
+<section class="relative py-40 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30" data-alt="Close-up of professional dealer's hands expertly shuffling premium playing cards on a navy felt table under warm spotlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB89hQbhmpN0pD5KgBiGc95iRjCo64hkxDK_Lv7Bpmr8X4Ax8zQRJHPB6x53oI5nwmst4VFAGdHP2W5mGRYGOTew9n60IiDKfpMH7MCdSHEx2cLHTOABN5WQdsmnaUbg_Mib1qSPqTrHeVeVkVr6WG3fh9piE7xlQK7bgPl-ogT9vaLk3ledOcspveweBIC59gw7akSbYwyLK0kHFubXb-mS1mmPUf1WfuuU1thI4P3zPWxDqGGQJ_tKRgl3IyHp1idj3dGsDb1JXY"/>
+<div class="absolute inset-0 bg-surface/80"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+<div class="inline-block border border-primary/40 px-4 py-1 mb-8 text-xs tracking-[0.3em] text-primary">LEARN THE ART</div>
+<h2 class="font-headline text-4xl md:text-6xl mb-8 leading-tight">毎日無料講習あり</h2>
+<p class="text-lg text-on-surface-variant mb-12 leading-loose">
+                    ATHENAでは、全てのゲストにカジノの真髄を楽しんでいただくため、<br class="hidden md:block"/>
+                    熟練のディーラーによる無料レクチャーを毎日開催しております。<br class="hidden md:block"/>
+                    ルールが不安な方も、まずは気軽にご参加ください。
+                </p>
+<button class="bg-primary text-on-primary px-10 py-4 font-bold text-lg hover:bg-primary-fixed-dim transition-colors scale-95 active:scale-90">講習を予約する</button>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-32 max-w-3xl mx-auto px-6">
+<h2 class="font-headline text-3xl mb-16 text-center gold-gradient-text">よくあるご質問</h2>
+<div class="space-y-6">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-container-low p-6 rounded-lg transition-all hover:bg-surface-container">
+<div class="flex justify-between items-center cursor-pointer group">
+<span class="font-headline text-lg text-on-surface">服装の規定はありますか？</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform">add</span>
+</div>
+<div class="mt-4 text-on-surface-variant text-sm leading-relaxed border-l-2 border-primary/20 pl-4">
+                        スマートカジュアルを推奨しております。サンダルやショートパンツでのご来店はご遠慮いただく場合がございます。
+                    </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-container-low p-6 rounded-lg transition-all hover:bg-surface-container">
+<div class="flex justify-between items-center cursor-pointer group">
+<span class="font-headline text-lg text-on-surface">一人で行っても大丈夫ですか？</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform">add</span>
+</div>
+<div class="mt-4 text-on-surface-variant text-sm leading-relaxed border-l-2 border-primary/20 pl-4">
+                        もちろんです。お一人でゆっくり楽しまれるお客様も多くいらっしゃいます。バーカウンターでのひとときもおすすめです。
+                    </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-container-low p-6 rounded-lg transition-all hover:bg-surface-container">
+<div class="flex justify-between items-center cursor-pointer group">
+<span class="font-headline text-lg text-on-surface">未経験でも勝てますか？</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform">add</span>
+</div>
+<div class="mt-4 text-on-surface-variant text-sm leading-relaxed border-l-2 border-primary/20 pl-4">
+                        カジノは運も重要な要素です。無料講習で勝率を上げるためのセオリーをお教えしますので、ぜひご活用ください。
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0d0d19] w-full py-12 border-t border-[#f2ca50]/10 flex flex-col items-center gap-6 px-10">
+<div class="text-sm font-headline tracking-[0.5em] text-primary mb-4">ATHENA</div>
+<div class="flex flex-wrap justify-center gap-8 text-xs font-manrope tracking-widest">
+<a class="text-white/40 hover:text-[#f2ca50] transition-colors" href="#">Privacy</a>
+<a class="text-white/40 hover:text-[#f2ca50] transition-colors" href="#">Terms</a>
+<a class="text-white/40 hover:text-[#f2ca50] transition-colors" href="#">Responsible Gaming</a>
+<a class="text-white/40 hover:text-[#f2ca50] transition-colors" href="#">Contact</a>
+</div>
+<div class="mt-8 text-center">
+<p class="text-white/30 text-[10px] tracking-tighter uppercase mb-2">© 2024 ATHENA LUXURY CASINO &amp; BAR. ADULTS ONLY.</p>
+<div class="flex justify-center gap-4 text-white/20">
+<span class="material-symbols-outlined text-lg">brand_awareness</span>
+<span class="material-symbols-outlined text-lg">verified_user</span>
+<span class="material-symbols-outlined text-lg">18_up_rating</span>
+</div>
+</div>
+</footer>
+</body></html>

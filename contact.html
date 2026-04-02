@@ -1,315 +1,274 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お問い合わせ・ご予約 | ATHENA - アミューズメントカジノバー 池袋</title>
-  <meta name="description" content="ATHENAへのお問い合わせ・ご予約。お電話またはフォームからお気軽にご連絡ください。">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { gold: '#c5b358', 'gold-light': '#d4c36a', 'gold-dark': '#b09a3e', navy: '#0a0e1a', 'navy-light': '#131833', 'navy-mid': '#1a2040' },
-          fontFamily: { sans: ['Noto Sans JP', 'sans-serif'], serif: ['Noto Serif JP', 'serif'] }
-        }
+
+<html class="dark" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#e9c349",
+              "on-primary-container": "#554300",
+              "tertiary-fixed": "#ffe16d",
+              "surface-container-lowest": "#0d0d19",
+              "on-error": "#690005",
+              "surface-bright": "#383846",
+              "on-primary-fixed": "#241a00",
+              "secondary": "#bfc2fb",
+              "tertiary-container": "#d2b100",
+              "on-tertiary-container": "#534400",
+              "on-surface-variant": "#d0c5af",
+              "surface-container-high": "#292936",
+              "surface-container-low": "#1a1a27",
+              "on-secondary-fixed": "#131645",
+              "outline-variant": "#4d4635",
+              "inverse-primary": "#735c00",
+              "surface-variant": "#343341",
+              "surface-container": "#1f1e2b",
+              "secondary-fixed-dim": "#bfc2fb",
+              "on-tertiary-fixed-variant": "#544600",
+              "inverse-on-surface": "#2f2f3d",
+              "secondary-fixed": "#e0e0ff",
+              "on-secondary": "#282c5b",
+              "on-tertiary": "#3a3000",
+              "primary": "#f2ca50",
+              "on-tertiary-fixed": "#221b00",
+              "error": "#ffb4ab",
+              "surface": "#12121f",
+              "tertiary-fixed-dim": "#e9c400",
+              "surface-tint": "#e9c349",
+              "error-container": "#93000a",
+              "background": "#12121f",
+              "on-primary-fixed-variant": "#574500",
+              "on-surface": "#e3e0f3",
+              "inverse-surface": "#e3e0f3",
+              "primary-container": "#d4af37",
+              "surface-container-highest": "#343341",
+              "primary-fixed": "#ffe088",
+              "on-primary": "#3c2f00",
+              "outline": "#99907c",
+              "on-secondary-container": "#aeb1e9",
+              "tertiary": "#f2cc00",
+              "on-background": "#e3e0f3",
+              "surface-dim": "#12121f",
+              "on-secondary-fixed-variant": "#3f4273",
+              "on-error-container": "#ffdad6",
+              "secondary-container": "#3f4273"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif JP"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
       }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
-    body { font-family: 'Noto Sans JP', sans-serif; }
-    .font-serif { font-family: 'Noto Serif JP', serif; }
-    html { scroll-behavior: smooth; }
-    .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
-    .mobile-menu.open { transform: translateX(0); }
-    input, textarea, select {
-      background-color: #1a2040;
-      border: 1px solid rgba(197,179,88,0.2);
-      color: #e5e7eb;
-      border-radius: 8px;
-      padding: 12px 16px;
-      width: 100%;
-      transition: border-color 0.3s;
-    }
-    input:focus, textarea:focus, select:focus {
-      outline: none;
-      border-color: #c5b358;
-      box-shadow: 0 0 0 2px rgba(197,179,88,0.1);
-    }
-    input::placeholder, textarea::placeholder { color: #6b7280; }
-  </style>
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(31, 30, 43, 0.6);
+        backdrop-filter: blur(24px);
+      }
+      .illuminated-edge-top {
+        border-top: 1px solid rgba(242, 202, 80, 0.3);
+      }
+      .gold-gradient-bg {
+        background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+      }
+      .tonal-shift {
+        transition: background-color 0.3s ease;
+      }
+    </style>
 </head>
-<body class="bg-navy text-gray-200">
-
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full z-50 bg-navy/95 backdrop-blur-md border-b border-gold/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-540x462_webp_5555fae8-c7c6-4e61-be8f-8b890bce650a.webp" alt="ATHENA" class="h-10 w-auto">
-          <span class="text-gold font-serif font-bold text-lg hidden sm:block">ATHENA</span>
-        </a>
-        <div class="hidden lg:flex items-center space-x-6 text-sm">
-          <a href="index.html" class="hover:text-gold transition">TOP</a>
-          <a href="beginner.html" class="hover:text-gold transition">初めての方へ</a>
-          <a href="games.html" class="hover:text-gold transition">ゲーム紹介</a>
-          <a href="system.html" class="hover:text-gold transition">料金システム</a>
-          <a href="fooddrink.html" class="hover:text-gold transition">フード&ドリンク</a>
-          <a href="event.html" class="hover:text-gold transition">イベント</a>
-          <a href="recruit.html" class="hover:text-gold transition">採用情報</a>
-          <a href="access.html" class="hover:text-gold transition">アクセス</a>
-          <a href="contact.html" class="bg-gold text-navy px-4 py-2 rounded hover:bg-gold-light transition font-medium">予約する</a>
-        </div>
-        <button id="menu-toggle" class="lg:hidden text-gold"><span class="material-symbols-outlined text-3xl">menu</span></button>
-      </div>
-    </div>
-  </nav>
-
-  <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-72 bg-navy-light z-50 border-l border-gold/20 p-6 pt-20">
-    <button id="menu-close" class="absolute top-5 right-5 text-gold"><span class="material-symbols-outlined text-3xl">close</span></button>
-    <div class="flex flex-col space-y-4">
-      <a href="index.html" class="py-2 border-b border-gold/10 hover:text-gold transition">TOP</a>
-      <a href="beginner.html" class="py-2 border-b border-gold/10 hover:text-gold transition">初めての方へ</a>
-      <a href="games.html" class="py-2 border-b border-gold/10 hover:text-gold transition">ゲーム紹介</a>
-      <a href="system.html" class="py-2 border-b border-gold/10 hover:text-gold transition">料金システム</a>
-      <a href="fooddrink.html" class="py-2 border-b border-gold/10 hover:text-gold transition">フード&ドリンク</a>
-      <a href="event.html" class="py-2 border-b border-gold/10 hover:text-gold transition">イベント</a>
-      <a href="recruit.html" class="py-2 border-b border-gold/10 hover:text-gold transition">採用情報</a>
-      <a href="access.html" class="py-2 border-b border-gold/10 hover:text-gold transition">アクセス</a>
-      <a href="contact.html" class="bg-gold text-navy px-4 py-3 rounded text-center font-medium mt-4 hover:bg-gold-light transition">予約する</a>
-    </div>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- Shared Navigation -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(10,14,26,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(197,179,88,0.2);padding:12px 24px;display:flex;justify-content:space-between;align-items:center;font-family:'Noto Sans JP',sans-serif;">
+  <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+    <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-480x150_webp_30ea6a5b-683f-4d2d-88ec-a3de425c4baf.webp" alt="ATHENA" style="height:30px;">
+  </a>
+  <div class="desktop-nav" style="display:flex;gap:24px;align-items:center;">
+    <a href="index.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">TOP</a>
+    <a href="beginner.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">初めての方へ</a>
+    <a href="games.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">ゲーム紹介</a>
+    <a href="system.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">料金システム</a>
+    <a href="fooddrink.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">フード＆ドリンク</a>
+    <a href="event.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">イベント</a>
+    <a href="recruit.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">採用情報</a>
+    <a href="access.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">アクセス</a>
+    <a href="contact.html" style="background:#c5b358;color:#0a0e1a;padding:8px 20px;border-radius:4px;text-decoration:none;font-size:13px;font-weight:700;">予約する</a>
   </div>
-  <div id="menu-overlay" class="fixed inset-0 bg-black/60 z-40 hidden"></div>
+  <button id="hamburger-btn" style="display:none;background:none;border:none;color:#c5b358;font-size:28px;cursor:pointer;font-family:Material Symbols Outlined;" onclick="document.getElementById('sp-menu').classList.add('open');document.getElementById('sp-overlay').classList.add('open');">menu</button>
+</nav>
+<style>
+@media(max-width:990px){.desktop-nav{display:none!important;}#hamburger-btn{display:block!important;}}
+#sp-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:99998;}
+#sp-overlay.open{display:block;}
+#sp-menu{position:fixed;top:0;right:0;width:280px;height:100vh;background:#0a0e1a;z-index:99999;transform:translateX(100%);transition:transform 0.3s;padding:60px 30px;display:flex;flex-direction:column;gap:4px;border-left:1px solid rgba(197,179,88,0.3);}
+#sp-menu.open{transform:translateX(0);}
+#sp-menu a{color:#e0dcd0;text-decoration:none;font-size:15px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-family:'Noto Sans JP',sans-serif;}
+#sp-menu a:hover{color:#c5b358;}
+#sp-menu .close-btn{position:absolute;top:16px;right:16px;background:none;border:none;color:#c5b358;font-size:28px;cursor:pointer;font-family:Material Symbols Outlined;}
+</style>
+<div id="sp-overlay" onclick="document.getElementById('sp-menu').classList.remove('open');this.classList.remove('open');"></div>
+<div id="sp-menu">
+  <button class="close-btn" onclick="document.getElementById('sp-menu').classList.remove('open');document.getElementById('sp-overlay').classList.remove('open');">close</button>
+  <a href="index.html">TOP</a>
+  <a href="beginner.html">初めての方へ</a>
+  <a href="games.html">ゲーム紹介</a>
+  <a href="system.html">料金システム</a>
+  <a href="fooddrink.html">フード＆ドリンク</a>
+  <a href="event.html">イベント</a>
+  <a href="recruit.html">採用情報</a>
+  <a href="access.html">アクセス</a>
+  <a href="contact.html">お問い合わせ</a>
+</div>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<!-- End Shared Navigation -->
 
-  <!-- Page Hero -->
-  <section class="pt-28 pb-16 bg-gradient-to-b from-navy-mid to-navy">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <p class="text-gold text-sm font-medium tracking-widest mb-2">CONTACT</p>
-      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">お問い合わせ・ご予約</h1>
-      <p class="text-gray-300 text-lg leading-relaxed">お電話またはフォームからお気軽にご連絡ください。</p>
-    </div>
-  </section>
-
-  <!-- Quick Contact -->
-  <section class="py-12 bg-navy">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <a href="tel:03-6903-1642" class="bg-navy-mid border border-gold/20 rounded-xl p-8 text-center hover:border-gold/40 transition group">
-          <span class="material-symbols-outlined text-gold text-5xl mb-4 group-hover:scale-110 transition-transform inline-block">phone</span>
-          <h2 class="font-serif text-2xl font-bold text-white mb-2">お電話でのご予約</h2>
-          <p class="text-gold text-3xl font-bold mb-2">03-6903-1642</p>
-          <p class="text-gray-400 text-sm">受付時間: 13:00〜24:00（年中無休）</p>
-        </a>
-        <div class="bg-navy-mid border border-gold/20 rounded-xl p-8 text-center">
-          <span class="material-symbols-outlined text-gold text-5xl mb-4">share</span>
-          <h2 class="font-serif text-2xl font-bold text-white mb-4">SNSでもお気軽に</h2>
-          <div class="flex justify-center space-x-6">
-            <a href="https://twitter.com/athena_poker" target="_blank" class="text-gray-400 hover:text-gold transition">
-              <i class="fab fa-x-twitter text-3xl"></i>
-              <p class="text-xs mt-1">Twitter</p>
-            </a>
-            <a href="https://instagram.com/athena_ikebukuro" target="_blank" class="text-gray-400 hover:text-gold transition">
-              <i class="fab fa-instagram text-3xl"></i>
-              <p class="text-xs mt-1">Instagram</p>
-            </a>
-            <a href="https://youtube.com/@athena414" target="_blank" class="text-gray-400 hover:text-gold transition">
-              <i class="fab fa-youtube text-3xl"></i>
-              <p class="text-xs mt-1">YouTube</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="py-20 bg-navy-light">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <p class="text-gold text-sm font-medium tracking-widest mb-2">FORM</p>
-        <h2 class="font-serif text-3xl font-bold text-white">お問い合わせフォーム</h2>
-        <p class="text-gray-400 mt-2">以下のフォームに必要事項をご記入の上、送信してください。</p>
-      </div>
-
-      <form class="space-y-6" onsubmit="event.preventDefault(); document.getElementById('form-success').classList.remove('hidden'); this.classList.add('hidden');">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-sm text-gold mb-2">お名前 <span class="text-red-400">*</span></label>
-            <input type="text" placeholder="山田 太郎" required>
-          </div>
-          <div>
-            <label class="block text-sm text-gold mb-2">フリガナ</label>
-            <input type="text" placeholder="ヤマダ タロウ">
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-sm text-gold mb-2">メールアドレス <span class="text-red-400">*</span></label>
-            <input type="email" placeholder="example@email.com" required>
-          </div>
-          <div>
-            <label class="block text-sm text-gold mb-2">電話番号</label>
-            <input type="tel" placeholder="090-1234-5678">
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-sm text-gold mb-2">お問い合わせ種別 <span class="text-red-400">*</span></label>
-          <select required>
-            <option value="">選択してください</option>
-            <option value="reservation">ご予約</option>
-            <option value="question">ご質問・お問い合わせ</option>
-            <option value="event">イベントについて</option>
-            <option value="recruit">採用について</option>
-            <option value="other">その他</option>
-          </select>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-sm text-gold mb-2">ご来店希望日</label>
-            <input type="date">
-          </div>
-          <div>
-            <label class="block text-sm text-gold mb-2">ご来店人数</label>
-            <select>
-              <option value="">選択してください</option>
-              <option value="1">1名</option>
-              <option value="2">2名</option>
-              <option value="3">3名</option>
-              <option value="4">4名</option>
-              <option value="5+">5名以上</option>
-            </select>
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-sm text-gold mb-2">メッセージ <span class="text-red-400">*</span></label>
-          <textarea rows="5" placeholder="ご質問やご要望をお書きください" required></textarea>
-        </div>
-
-        <div class="text-center pt-4">
-          <button type="submit" class="bg-gold text-navy px-12 py-4 rounded-lg text-lg font-bold hover:bg-gold-light transition shadow-lg shadow-gold/20">
-            送信する<span class="material-symbols-outlined align-middle ml-1">send</span>
-          </button>
-        </div>
-      </form>
-
-      <!-- Success Message -->
-      <div id="form-success" class="hidden text-center bg-navy-mid border border-gold/20 rounded-xl p-12">
-        <span class="material-symbols-outlined text-gold text-6xl mb-4">check_circle</span>
-        <h3 class="font-serif text-2xl font-bold text-white mb-4">送信完了</h3>
-        <p class="text-gray-300 mb-6">お問い合わせありがとうございます。<br>内容を確認の上、折り返しご連絡いたします。</p>
-        <a href="index.html" class="inline-flex items-center text-gold hover:text-gold-light transition font-medium">
-          <span class="material-symbols-outlined mr-1">arrow_back</span>トップページに戻る
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Store Info -->
-  <section class="py-16 bg-navy">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-navy-mid border border-gold/10 rounded-xl p-8">
-        <h3 class="font-serif text-xl font-bold text-white mb-6 text-center">店舗情報</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="space-y-3">
-            <div class="flex items-start">
-              <span class="material-symbols-outlined text-gold mr-3 mt-0.5">location_on</span>
-              <div>
-                <p class="text-gray-400 text-sm">住所</p>
-                <p class="text-white">東京都豊島区池袋2-12-13 十二ビル4F</p>
-              </div>
-            </div>
-            <div class="flex items-start">
-              <span class="material-symbols-outlined text-gold mr-3 mt-0.5">train</span>
-              <div>
-                <p class="text-gray-400 text-sm">アクセス</p>
-                <p class="text-white">池袋駅西口から徒歩3分</p>
-              </div>
-            </div>
-          </div>
-          <div class="space-y-3">
-            <div class="flex items-start">
-              <span class="material-symbols-outlined text-gold mr-3 mt-0.5">schedule</span>
-              <div>
-                <p class="text-gray-400 text-sm">営業時間</p>
-                <p class="text-white">13:00〜24:00（年中無休）</p>
-              </div>
-            </div>
-            <div class="flex items-start">
-              <span class="material-symbols-outlined text-gold mr-3 mt-0.5">phone</span>
-              <div>
-                <p class="text-gray-400 text-sm">電話番号</p>
-                <p class="text-white"><a href="tel:03-6903-1642" class="hover:text-gold transition">03-6903-1642</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-navy border-t border-gold/10 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        <div>
-          <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-540x462_webp_5555fae8-c7c6-4e61-be8f-8b890bce650a.webp" alt="ATHENA" class="h-16 w-auto mb-4">
-          <p class="text-gray-400 text-sm leading-relaxed">池袋西口最大級<br>アミューズメントカジノバー</p>
-          <div class="flex space-x-4 mt-4">
-            <a href="https://twitter.com/athena_poker" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-x-twitter text-xl"></i></a>
-            <a href="https://instagram.com/athena_ikebukuro" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-instagram text-xl"></i></a>
-            <a href="https://youtube.com/@athena414" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-youtube text-xl"></i></a>
-          </div>
-        </div>
-        <div>
-          <h4 class="text-gold font-medium mb-4">INFORMATION</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="beginner.html" class="text-gray-400 hover:text-gold transition">初めての方へ</a></li>
-            <li><a href="games.html" class="text-gray-400 hover:text-gold transition">ゲーム紹介</a></li>
-            <li><a href="system.html" class="text-gray-400 hover:text-gold transition">料金システム</a></li>
-            <li><a href="fooddrink.html" class="text-gray-400 hover:text-gold transition">フード&ドリンク</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-gold font-medium mb-4">LINKS</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="event.html" class="text-gray-400 hover:text-gold transition">イベント</a></li>
-            <li><a href="recruit.html" class="text-gray-400 hover:text-gold transition">採用情報</a></li>
-            <li><a href="access.html" class="text-gray-400 hover:text-gold transition">アクセス</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-gold transition">お問い合わせ</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-gold font-medium mb-4">CONTACT</h4>
-          <p class="text-gray-400 text-sm mb-2">東京都豊島区池袋2-12-13<br>十二ビル4F</p>
-          <p class="text-gray-400 text-sm mb-2">TEL: <a href="tel:03-6903-1642" class="hover:text-gold transition">03-6903-1642</a></p>
-          <p class="text-gray-400 text-sm">営業時間: 13:00〜24:00</p>
-        </div>
-      </div>
-      <div class="border-t border-gold/10 pt-8 text-center">
-        <p class="text-gray-500 text-sm">&copy; 2024 ATHENA - アミューズメントカジノバー 池袋. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuClose = document.getElementById('menu-close');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuOverlay = document.getElementById('menu-overlay');
-    function openMenu() { mobileMenu.classList.add('open'); menuOverlay.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
-    function closeMenu() { mobileMenu.classList.remove('open'); menuOverlay.classList.add('hidden'); document.body.style.overflow = ''; }
-    menuToggle.addEventListener('click', openMenu);
-    menuClose.addEventListener('click', closeMenu);
-    menuOverlay.addEventListener('click', closeMenu);
-  </script>
-</body>
-</html>
+<!-- TopNavBar -->
+<nav class="bg-[#12121f] dark:bg-[#12121f] docked full-width top-0 z-50 flex justify-between items-center w-full px-8 h-20 max-w-full tonal-shift">
+<div class="text-2xl font-headline tracking-widest text-[#f2ca50] dark:text-[#f2ca50]">ATHENA</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-gray-400 font-medium hover:text-[#f2ca50] transition-all duration-300 ease-in-out font-label" href="#">ホーム</a>
+<a class="text-gray-400 font-medium hover:text-[#f2ca50] transition-all duration-300 ease-in-out font-label" href="#">ゲーム</a>
+<a class="text-gray-400 font-medium hover:text-[#f2ca50] transition-all duration-300 ease-in-out font-label" href="#">バー</a>
+<a class="text-gray-400 font-medium hover:text-[#f2ca50] transition-all duration-300 ease-in-out font-label" href="#">イベント</a>
+<a class="text-gray-400 font-medium hover:text-[#f2ca50] transition-all duration-300 ease-in-out font-label" href="#">アクセス</a>
+<a class="text-[#f2ca50] font-bold border-b-2 border-[#f2ca50] pb-1 font-label" href="#">お問い合わせ</a>
+</div>
+<button class="gold-gradient-bg text-on-primary px-6 py-2 rounded-lg font-bold font-label transition-transform active:scale-95 hover:shadow-[0_0_20px_rgba(242,202,80,0.4)]">
+            予約する
+        </button>
+</nav>
+<main class="min-h-screen pb-24">
+<!-- Hero Header -->
+<header class="relative h-[409px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 grayscale" data-alt="luxury moody interior of a high-end dark blue lounge with warm gold lighting accents and elegant textured walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNxXiB40pyFiJKeqk5Ykz9BbrqoYECR9XIvbIxYyRSWUXWuKjT9R_CyJNW62K8wgvcGPWKVl5YeLqm6rHrSxwHT7KtHn2hP8slwSwf8dULJQRy_tsyJt5v38b_9nxZPCjlcZ5Y5FBUwrU1JXg20nmU_pFr3LjI2Vqe0SulIrTBohcA6v7M8ARGWmOhS23UaSGlLozH4tWmB5A4iGkEUu_mIcsjaKvfoCDK3uo8qAUC3pAx7DRhoaUof3MxNORJ4u3HiiYZ5rpg5Jw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/80 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center space-y-4 px-4">
+<h1 class="text-5xl md:text-7xl font-headline font-black tracking-tight text-primary">お問い合わせ</h1>
+<p class="text-on-surface-variant font-label tracking-[0.2em] uppercase text-sm">Contact Us</p>
+<div class="w-24 h-px bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-8"></div>
+</div>
+</header>
+<section class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 mt-[-60px] relative z-20">
+<!-- Sidebar Info -->
+<div class="lg:col-span-4 space-y-8">
+<div class="bg-surface-container p-8 rounded-xl illuminated-edge-top shadow-2xl">
+<h2 class="text-primary font-headline text-2xl mb-6">お電話でのご予約</h2>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">
+                        当日のご予約や空席確認など、お急ぎの方はお電話にて承っております。
+                    </p>
+<a class="block text-3xl md:text-4xl font-headline font-bold text-primary hover:opacity-80 transition-opacity" href="tel:0369031642">
+                        03-6903-1642
+                    </a>
+<p class="text-on-surface-variant text-xs mt-4">受付時間: 18:00 — 04:00 (年中無休)</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl space-y-6">
+<h3 class="text-on-surface font-headline text-lg">SNS &amp; LINE</h3>
+<div class="space-y-4">
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</div>
+<span class="font-label group-hover:text-primary transition-colors">LINE公式アカウント</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="brand_awareness">brand_awareness</span>
+</div>
+<span class="font-label group-hover:text-primary transition-colors">Twitter (X)</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+</div>
+<span class="font-label group-hover:text-primary transition-colors">Instagram</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="smart_display">smart_display</span>
+</div>
+<span class="font-label group-hover:text-primary transition-colors">YouTube</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-8">
+<div class="glass-effect p-8 md:p-12 rounded-xl border border-outline-variant/20 shadow-2xl">
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-primary/70">お名前</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-body py-3 transition-colors placeholder:text-gray-600" placeholder="姓名 太郎" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-primary/70">メールアドレス</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-body py-3 transition-colors placeholder:text-gray-600" placeholder="example@athena.jp" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-primary/70">お問い合わせ種別</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-body py-3 transition-colors appearance-none">
+<option class="bg-surface">ご予約について</option>
+<option class="bg-surface">貸切パーティーのご相談</option>
+<option class="bg-surface">採用情報について</option>
+<option class="bg-surface">その他のお問い合わせ</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-primary/70">お問い合わせ内容</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-body py-3 transition-colors resize-none placeholder:text-gray-600" placeholder="詳細をご記入ください" rows="6"></textarea>
+</div>
+<div class="pt-6">
+<button class="w-full md:w-auto px-12 py-4 gold-gradient-bg text-on-primary font-bold font-label text-lg rounded-lg hover:shadow-[0_0_30px_rgba(242,202,80,0.3)] transition-all duration-300 active:scale-[0.98]" type="submit">
+                                送信する
+                            </button>
+<p class="text-[10px] text-on-surface-variant mt-4 font-label">
+                                ※送信いただいた内容は、プライバシーポリシーに基づき厳重に管理されます。
+                            </p>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Signature Graphic Divider -->
+<div class="mt-32 max-w-4xl mx-auto px-6">
+<div class="flex items-center gap-4">
+<div class="h-px flex-1 bg-gradient-to-r from-transparent to-primary/30"></div>
+<div class="text-primary/50 font-headline italic">ATHENA Premium Experience</div>
+<div class="h-px flex-1 bg-gradient-to-l from-transparent to-primary/30"></div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0d0d19] dark:bg-[#0d0d19] w-full flex flex-col items-center gap-6 px-4 py-12 border-t border-[#f2ca50]/10 font-serif text-sm tracking-wide">
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="text-gray-500 hover:text-[#f2ca50] transition-all" href="#">利用規約</a>
+<a class="text-gray-500 hover:text-[#f2ca50] transition-all" href="#">プライバシーポリシー</a>
+<a class="text-gray-500 hover:text-[#f2ca50] transition-all" href="#">責任あるゲーミング</a>
+<a class="text-gray-500 hover:text-[#f2ca50] transition-all" href="#">SNS連携</a>
+</div>
+<div class="flex gap-6 my-2">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="chat">chat</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="brand_awareness">brand_awareness</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span></a>
+</div>
+<p class="text-gray-600 text-[10px] tracking-widest text-center">
+            © 2024 ATHENA PREMIUM CASINO BAR. ALL RIGHTS RESERVED.
+        </p>
+</footer>
+</body></html>

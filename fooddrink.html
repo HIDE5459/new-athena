@@ -1,359 +1,383 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>フード&ドリンク | ATHENA - アミューズメントカジノバー 池袋</title>
-  <meta name="description" content="ATHENAのフード&ドリンクメニュー。本格カクテル、ビール、ソフトドリンク、軽食をご用意しています。">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { gold: '#c5b358', 'gold-light': '#d4c36a', 'gold-dark': '#b09a3e', navy: '#0a0e1a', 'navy-light': '#131833', 'navy-mid': '#1a2040' },
-          fontFamily: { sans: ['Noto Sans JP', 'sans-serif'], serif: ['Noto Serif JP', 'serif'] }
-        }
+
+<html class="dark" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#ffdad6",
+              "surface-container": "#1f1e2b",
+              "on-secondary-fixed-variant": "#3f4273",
+              "surface-container-highest": "#343341",
+              "surface-container-high": "#292936",
+              "secondary-fixed-dim": "#bfc2fb",
+              "tertiary-fixed-dim": "#e9c400",
+              "outline-variant": "#4d4635",
+              "outline": "#99907c",
+              "on-tertiary": "#3a3000",
+              "secondary-fixed": "#e0e0ff",
+              "primary-fixed": "#ffe088",
+              "on-secondary-fixed": "#131645",
+              "secondary-container": "#3f4273",
+              "error-container": "#93000a",
+              "tertiary-container": "#d2b100",
+              "surface-tint": "#e9c349",
+              "on-primary-container": "#554300",
+              "on-tertiary-container": "#534400",
+              "background": "#12121f",
+              "on-surface-variant": "#d0c5af",
+              "on-surface": "#e3e0f3",
+              "on-primary-fixed": "#241a00",
+              "surface-bright": "#383846",
+              "on-error": "#690005",
+              "on-primary": "#3c2f00",
+              "on-tertiary-fixed-variant": "#544600",
+              "error": "#ffb4ab",
+              "surface-container-low": "#1a1a27",
+              "inverse-on-surface": "#2f2f3d",
+              "on-secondary-container": "#aeb1e9",
+              "tertiary-fixed": "#ffe16d",
+              "surface-dim": "#12121f",
+              "inverse-primary": "#735c00",
+              "on-secondary": "#282c5b",
+              "primary-container": "#d4af37",
+              "on-tertiary-fixed": "#221b00",
+              "inverse-surface": "#e3e0f3",
+              "surface": "#12121f",
+              "primary-fixed-dim": "#e9c349",
+              "on-background": "#e3e0f3",
+              "tertiary": "#f2cc00",
+              "surface-variant": "#343341",
+              "surface-container-lowest": "#0d0d19",
+              "secondary": "#bfc2fb",
+              "primary": "#f2ca50",
+              "on-primary-fixed-variant": "#574500"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "Noto Serif JP", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
       }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
-    body { font-family: 'Noto Sans JP', sans-serif; }
-    .font-serif { font-family: 'Noto Serif JP', serif; }
-    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(197,179,88,0.15); }
-    html { scroll-behavior: smooth; }
-    .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
-    .mobile-menu.open { transform: translateX(0); }
-  </style>
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #12121f;
+            color: #e3e0f3;
+            font-family: 'Manrope', sans-serif;
+        }
+        .serif-text { font-family: 'Noto Serif', 'Noto Serif JP', serif; }
+        .glass-panel {
+            background: rgba(31, 30, 43, 0.6);
+            backdrop-filter: blur(24px);
+        }
+        .rim-light {
+            border-top: 1px solid rgba(242, 202, 80, 0.3);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body class="bg-navy text-gray-200">
-
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full z-50 bg-navy/95 backdrop-blur-md border-b border-gold/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-540x462_webp_5555fae8-c7c6-4e61-be8f-8b890bce650a.webp" alt="ATHENA" class="h-10 w-auto">
-          <span class="text-gold font-serif font-bold text-lg hidden sm:block">ATHENA</span>
-        </a>
-        <div class="hidden lg:flex items-center space-x-6 text-sm">
-          <a href="index.html" class="hover:text-gold transition">TOP</a>
-          <a href="beginner.html" class="hover:text-gold transition">初めての方へ</a>
-          <a href="games.html" class="hover:text-gold transition">ゲーム紹介</a>
-          <a href="system.html" class="hover:text-gold transition">料金システム</a>
-          <a href="fooddrink.html" class="text-gold hover:text-gold-light transition">フード&ドリンク</a>
-          <a href="event.html" class="hover:text-gold transition">イベント</a>
-          <a href="recruit.html" class="hover:text-gold transition">採用情報</a>
-          <a href="access.html" class="hover:text-gold transition">アクセス</a>
-          <a href="contact.html" class="bg-gold text-navy px-4 py-2 rounded hover:bg-gold-light transition font-medium">予約する</a>
-        </div>
-        <button id="menu-toggle" class="lg:hidden text-gold"><span class="material-symbols-outlined text-3xl">menu</span></button>
-      </div>
-    </div>
-  </nav>
-
-  <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-72 bg-navy-light z-50 border-l border-gold/20 p-6 pt-20">
-    <button id="menu-close" class="absolute top-5 right-5 text-gold"><span class="material-symbols-outlined text-3xl">close</span></button>
-    <div class="flex flex-col space-y-4">
-      <a href="index.html" class="py-2 border-b border-gold/10 hover:text-gold transition">TOP</a>
-      <a href="beginner.html" class="py-2 border-b border-gold/10 hover:text-gold transition">初めての方へ</a>
-      <a href="games.html" class="py-2 border-b border-gold/10 hover:text-gold transition">ゲーム紹介</a>
-      <a href="system.html" class="py-2 border-b border-gold/10 hover:text-gold transition">料金システム</a>
-      <a href="fooddrink.html" class="text-gold font-medium py-2 border-b border-gold/10">フード&ドリンク</a>
-      <a href="event.html" class="py-2 border-b border-gold/10 hover:text-gold transition">イベント</a>
-      <a href="recruit.html" class="py-2 border-b border-gold/10 hover:text-gold transition">採用情報</a>
-      <a href="access.html" class="py-2 border-b border-gold/10 hover:text-gold transition">アクセス</a>
-      <a href="contact.html" class="bg-gold text-navy px-4 py-3 rounded text-center font-medium mt-4 hover:bg-gold-light transition">予約する</a>
-    </div>
+<body class="bg-background text-on-surface">
+<!-- Shared Navigation -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(10,14,26,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(197,179,88,0.2);padding:12px 24px;display:flex;justify-content:space-between;align-items:center;font-family:'Noto Sans JP',sans-serif;">
+  <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+    <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-480x150_webp_30ea6a5b-683f-4d2d-88ec-a3de425c4baf.webp" alt="ATHENA" style="height:30px;">
+  </a>
+  <div class="desktop-nav" style="display:flex;gap:24px;align-items:center;">
+    <a href="index.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">TOP</a>
+    <a href="beginner.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">初めての方へ</a>
+    <a href="games.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">ゲーム紹介</a>
+    <a href="system.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">料金システム</a>
+    <a href="fooddrink.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">フード＆ドリンク</a>
+    <a href="event.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">イベント</a>
+    <a href="recruit.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">採用情報</a>
+    <a href="access.html" style="color:#e0dcd0;text-decoration:none;font-size:13px;letter-spacing:1px;">アクセス</a>
+    <a href="contact.html" style="background:#c5b358;color:#0a0e1a;padding:8px 20px;border-radius:4px;text-decoration:none;font-size:13px;font-weight:700;">予約する</a>
   </div>
-  <div id="menu-overlay" class="fixed inset-0 bg-black/60 z-40 hidden"></div>
+  <button id="hamburger-btn" style="display:none;background:none;border:none;color:#c5b358;font-size:28px;cursor:pointer;font-family:Material Symbols Outlined;" onclick="document.getElementById('sp-menu').classList.add('open');document.getElementById('sp-overlay').classList.add('open');">menu</button>
+</nav>
+<style>
+@media(max-width:990px){.desktop-nav{display:none!important;}#hamburger-btn{display:block!important;}}
+#sp-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:99998;}
+#sp-overlay.open{display:block;}
+#sp-menu{position:fixed;top:0;right:0;width:280px;height:100vh;background:#0a0e1a;z-index:99999;transform:translateX(100%);transition:transform 0.3s;padding:60px 30px;display:flex;flex-direction:column;gap:4px;border-left:1px solid rgba(197,179,88,0.3);}
+#sp-menu.open{transform:translateX(0);}
+#sp-menu a{color:#e0dcd0;text-decoration:none;font-size:15px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-family:'Noto Sans JP',sans-serif;}
+#sp-menu a:hover{color:#c5b358;}
+#sp-menu .close-btn{position:absolute;top:16px;right:16px;background:none;border:none;color:#c5b358;font-size:28px;cursor:pointer;font-family:Material Symbols Outlined;}
+</style>
+<div id="sp-overlay" onclick="document.getElementById('sp-menu').classList.remove('open');this.classList.remove('open');"></div>
+<div id="sp-menu">
+  <button class="close-btn" onclick="document.getElementById('sp-menu').classList.remove('open');document.getElementById('sp-overlay').classList.remove('open');">close</button>
+  <a href="index.html">TOP</a>
+  <a href="beginner.html">初めての方へ</a>
+  <a href="games.html">ゲーム紹介</a>
+  <a href="system.html">料金システム</a>
+  <a href="fooddrink.html">フード＆ドリンク</a>
+  <a href="event.html">イベント</a>
+  <a href="recruit.html">採用情報</a>
+  <a href="access.html">アクセス</a>
+  <a href="contact.html">お問い合わせ</a>
+</div>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<!-- End Shared Navigation -->
 
-  <!-- Page Hero -->
-  <section class="pt-28 pb-16 bg-gradient-to-b from-navy-mid to-navy">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <p class="text-gold text-sm font-medium tracking-widest mb-2">FOOD & DRINK</p>
-      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">フード & ドリンク</h1>
-      <p class="text-gray-300 text-lg leading-relaxed">ゲームのお供に、豊富なメニューをご用意しています。</p>
-    </div>
-  </section>
-
-  <!-- Drink Hero Image -->
-  <section class="pb-12 bg-navy">
-    <div class="max-w-6xl mx-auto px-4">
-      <img src="https://images.unsplash.com/photo-1557653472-b6fbb664920f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8ODJ8fGFsY29ob2x8ZW58MHx8fHwxNjM1OTIxMDEx&ixlib=rb-1.2.1&q=80&w=1080" alt="ドリンク" class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lg">
-    </div>
-  </section>
-
-  <!-- Alcohol Menu -->
-  <section class="py-16 bg-navy">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-14">
-        <div class="flex items-center mb-8">
-          <span class="material-symbols-outlined text-gold text-3xl mr-3">local_bar</span>
-          <h2 class="font-serif text-3xl font-bold text-white">アルコール</h2>
-        </div>
-
-        <!-- Beer -->
-        <div class="mb-10">
-          <h3 class="text-gold font-medium text-lg mb-4 pb-2 border-b border-gold/20">ビール / Beer</h3>
-          <div class="space-y-3">
-            <div class="flex justify-between items-center py-2">
-              <div>
-                <p class="text-white">生ビール</p>
-                <p class="text-gray-500 text-sm">Draft Beer</p>
-              </div>
-              <span class="text-gold font-bold">¥600</span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <div>
-                <p class="text-white">瓶ビール</p>
-                <p class="text-gray-500 text-sm">Bottled Beer</p>
-              </div>
-              <span class="text-gold font-bold">¥700</span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <div>
-                <p class="text-white">クラフトビール</p>
-                <p class="text-gray-500 text-sm">Craft Beer（日替わり）</p>
-              </div>
-              <span class="text-gold font-bold">¥800</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cocktails -->
-        <div class="mb-10">
-          <h3 class="text-gold font-medium text-lg mb-4 pb-2 border-b border-gold/20">カクテル / Cocktails</h3>
-          <div class="space-y-3">
-            <div class="flex justify-between items-center py-2">
-              <div>
-                <p class="text-white">ジントニック</p>
-                <p class="text-gray-500 text-sm">Gin & Tonic</p>
-              </div>
-              <span class="text-gold font-bold">¥700</span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <div>
-                <p class="text-white">モスコミュール</p>
-                <p class="text-gray-500 text-sm">Moscow Mule</p>
-              </div>
-              <span class="text-gold font-bold">¥700</span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <div>
-                <p class="text-white">カシスオレンジ</p>
-                <p class="text-gray-500 text-sm">Cassis Orange</p>
-              </div>
-              <span class="text-gold font-bold">¥700</span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <div>
-                <p class="text-white">ATHENAスペシャル</p>
-                <p class="text-gray-500 text-sm">当店オリジナルカクテル</p>
-              </div>
-              <span class="text-gold font-bold">¥900</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Whiskey & Others -->
-        <div class="mb-10">
-          <h3 class="text-gold font-medium text-lg mb-4 pb-2 border-b border-gold/20">ウイスキー・ワイン / Whiskey & Wine</h3>
-          <div class="space-y-3">
-            <div class="flex justify-between items-center py-2">
-              <div>
-                <p class="text-white">ハイボール</p>
-                <p class="text-gray-500 text-sm">Highball</p>
-              </div>
-              <span class="text-gold font-bold">¥600</span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <div>
-                <p class="text-white">ウイスキー（各種）</p>
-                <p class="text-gray-500 text-sm">Whiskey</p>
-              </div>
-              <span class="text-gold font-bold">¥800〜</span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <div>
-                <p class="text-white">グラスワイン（赤・白）</p>
-                <p class="text-gray-500 text-sm">Glass Wine</p>
-              </div>
-              <span class="text-gold font-bold">¥700</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Soft Drinks -->
-  <section class="py-16 bg-navy-light">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center mb-8">
-        <span class="material-symbols-outlined text-gold text-3xl mr-3">emoji_food_beverage</span>
-        <h2 class="font-serif text-3xl font-bold text-white">ソフトドリンク</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12">
-        <div class="space-y-3">
-          <div class="flex justify-between items-center py-2">
-            <p class="text-white">コーラ / ジンジャーエール</p>
-            <span class="text-gold font-bold">¥400</span>
-          </div>
-          <div class="flex justify-between items-center py-2">
-            <p class="text-white">オレンジジュース</p>
-            <span class="text-gold font-bold">¥400</span>
-          </div>
-          <div class="flex justify-between items-center py-2">
-            <p class="text-white">ウーロン茶</p>
-            <span class="text-gold font-bold">¥400</span>
-          </div>
-        </div>
-        <div class="space-y-3">
-          <div class="flex justify-between items-center py-2">
-            <p class="text-white">コーヒー（ホット/アイス）</p>
-            <span class="text-gold font-bold">¥400</span>
-          </div>
-          <div class="flex justify-between items-center py-2">
-            <p class="text-white">レッドブル</p>
-            <span class="text-gold font-bold">¥500</span>
-          </div>
-          <div class="flex justify-between items-center py-2">
-            <p class="text-white">ノンアルコールカクテル</p>
-            <span class="text-gold font-bold">¥500</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Food Menu -->
-  <section class="py-16 bg-navy">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center mb-8">
-        <span class="material-symbols-outlined text-gold text-3xl mr-3">restaurant</span>
-        <h2 class="font-serif text-3xl font-bold text-white">フード</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12">
-        <div class="space-y-3">
-          <div class="flex justify-between items-center py-2">
-            <div>
-              <p class="text-white">ミックスナッツ</p>
-              <p class="text-gray-500 text-sm">Mixed Nuts</p>
-            </div>
-            <span class="text-gold font-bold">¥400</span>
-          </div>
-          <div class="flex justify-between items-center py-2">
-            <div>
-              <p class="text-white">フライドポテト</p>
-              <p class="text-gray-500 text-sm">French Fries</p>
-            </div>
-            <span class="text-gold font-bold">¥500</span>
-          </div>
-          <div class="flex justify-between items-center py-2">
-            <div>
-              <p class="text-white">枝豆</p>
-              <p class="text-gray-500 text-sm">Edamame</p>
-            </div>
-            <span class="text-gold font-bold">¥400</span>
-          </div>
-        </div>
-        <div class="space-y-3">
-          <div class="flex justify-between items-center py-2">
-            <div>
-              <p class="text-white">ピザ</p>
-              <p class="text-gray-500 text-sm">Pizza</p>
-            </div>
-            <span class="text-gold font-bold">¥800</span>
-          </div>
-          <div class="flex justify-between items-center py-2">
-            <div>
-              <p class="text-white">チキンナゲット</p>
-              <p class="text-gray-500 text-sm">Chicken Nuggets</p>
-            </div>
-            <span class="text-gold font-bold">¥500</span>
-          </div>
-          <div class="flex justify-between items-center py-2">
-            <div>
-              <p class="text-white">チーズ盛り合わせ</p>
-              <p class="text-gray-500 text-sm">Cheese Platter</p>
-            </div>
-            <span class="text-gold font-bold">¥700</span>
-          </div>
-        </div>
-      </div>
-      <p class="text-gray-500 text-sm mt-8">※メニューや価格は予告なく変更する場合がございます。</p>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-16 bg-gradient-to-b from-navy to-navy-light">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">ゲームとドリンクを楽しもう</h2>
-      <p class="text-gray-300 mb-8">エントリーフィーに1ドリンクが含まれています。</p>
-      <a href="contact.html" class="bg-gold text-navy px-8 py-3 rounded-lg font-bold hover:bg-gold-light transition">予約する</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-navy border-t border-gold/10 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        <div>
-          <img src="https://storage.googleapis.com/studio-design-asset-files/projects/1Va64wE2O7/s-540x462_webp_5555fae8-c7c6-4e61-be8f-8b890bce650a.webp" alt="ATHENA" class="h-16 w-auto mb-4">
-          <p class="text-gray-400 text-sm leading-relaxed">池袋西口最大級<br>アミューズメントカジノバー</p>
-          <div class="flex space-x-4 mt-4">
-            <a href="https://twitter.com/athena_poker" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-x-twitter text-xl"></i></a>
-            <a href="https://instagram.com/athena_ikebukuro" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-instagram text-xl"></i></a>
-            <a href="https://youtube.com/@athena414" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fab fa-youtube text-xl"></i></a>
-          </div>
-        </div>
-        <div>
-          <h4 class="text-gold font-medium mb-4">INFORMATION</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="beginner.html" class="text-gray-400 hover:text-gold transition">初めての方へ</a></li>
-            <li><a href="games.html" class="text-gray-400 hover:text-gold transition">ゲーム紹介</a></li>
-            <li><a href="system.html" class="text-gray-400 hover:text-gold transition">料金システム</a></li>
-            <li><a href="fooddrink.html" class="text-gray-400 hover:text-gold transition">フード&ドリンク</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-gold font-medium mb-4">LINKS</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="event.html" class="text-gray-400 hover:text-gold transition">イベント</a></li>
-            <li><a href="recruit.html" class="text-gray-400 hover:text-gold transition">採用情報</a></li>
-            <li><a href="access.html" class="text-gray-400 hover:text-gold transition">アクセス</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-gold transition">お問い合わせ</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-gold font-medium mb-4">CONTACT</h4>
-          <p class="text-gray-400 text-sm mb-2">東京都豊島区池袋2-12-13<br>十二ビル4F</p>
-          <p class="text-gray-400 text-sm mb-2">TEL: <a href="tel:03-6903-1642" class="hover:text-gold transition">03-6903-1642</a></p>
-          <p class="text-gray-400 text-sm">営業時間: 13:00〜24:00</p>
-        </div>
-      </div>
-      <div class="border-t border-gold/10 pt-8 text-center">
-        <p class="text-gray-500 text-sm">&copy; 2024 ATHENA - アミューズメントカジノバー 池袋. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuClose = document.getElementById('menu-close');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuOverlay = document.getElementById('menu-overlay');
-    function openMenu() { mobileMenu.classList.add('open'); menuOverlay.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
-    function closeMenu() { mobileMenu.classList.remove('open'); menuOverlay.classList.add('hidden'); document.body.style.overflow = ''; }
-    menuToggle.addEventListener('click', openMenu);
-    menuClose.addEventListener('click', closeMenu);
-    menuOverlay.addEventListener('click', closeMenu);
-  </script>
-</body>
-</html>
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[#12121f] flex justify-between items-center w-full px-8 py-4 max-w-full border-b-0">
+<div class="text-2xl font-bold tracking-tighter text-[#f2ca50] font-['Noto_Serif']">ATHENA</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-400 font-medium hover:text-[#f2ca50] transition-all duration-300 ease-in-out font-['Noto_Serif'] tracking-tighter" href="#">Lounge</a>
+<a class="text-slate-400 font-medium hover:text-[#f2ca50] transition-all duration-300 ease-in-out font-['Noto_Serif'] tracking-tighter" href="#">Casino</a>
+<a class="text-slate-400 font-medium hover:text-[#f2ca50] transition-all duration-300 ease-in-out font-['Noto_Serif'] tracking-tighter" href="#">Rewards</a>
+<a class="text-slate-400 font-medium hover:text-[#f2ca50] transition-all duration-300 ease-in-out font-['Noto_Serif'] tracking-tighter" href="#">Events</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-lg font-bold hover:scale-95 duration-300 transition-transform">
+                Table Reservation
+            </button>
+<span class="material-symbols-outlined text-[#f2ca50] cursor-pointer">account_circle</span>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="hidden lg:flex h-full w-64 fixed left-0 top-0 pt-24 bg-[#0d0d19] flex-col gap-4 py-8 pl-4 z-40">
+<div class="px-4 mb-8">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">restaurant_menu</span>
+</div>
+<div>
+<h3 class="text-xs font-['Manrope'] font-medium uppercase tracking-widest text-[#d4AF37]">The Menu</h3>
+<p class="text-[10px] text-slate-500">Refined Selections</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 py-3 px-4 text-[#f2ca50] font-bold bg-[#1f1e2b]/50 rounded-r-lg translate-x-1 duration-300" href="#cocktails">
+<span class="material-symbols-outlined">local_bar</span>
+<span class="font-['Manrope'] font-medium uppercase tracking-widest text-xs">Signature Cocktails</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-500 hover:bg-[#1f1e2b] hover:text-[#f2ca50] transition-colors duration-300" href="#spirits">
+<span class="material-symbols-outlined">liquor</span>
+<span class="font-['Manrope'] font-medium uppercase tracking-widest text-xs">Vintage Spirits</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-500 hover:bg-[#1f1e2b] hover:text-[#f2ca50] transition-colors duration-300" href="#wine">
+<span class="material-symbols-outlined">wine_bar</span>
+<span class="font-['Manrope'] font-medium uppercase tracking-widest text-xs">Champagne</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-500 hover:bg-[#1f1e2b] hover:text-[#f2ca50] transition-colors duration-300" href="#food">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-['Manrope'] font-medium uppercase tracking-widest text-xs">Small Plates</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-slate-500 hover:bg-[#1f1e2b] hover:text-[#f2ca50] transition-colors duration-300" href="#main">
+<span class="material-symbols-outlined">flatware</span>
+<span class="font-['Manrope'] font-medium uppercase tracking-widest text-xs">Main Fare</span>
+</a>
+</nav>
+<div class="mt-auto pr-8 py-8">
+<button class="w-full py-3 border border-primary/30 text-primary text-[10px] uppercase tracking-widest font-bold rounded hover:bg-primary/10 transition-colors">
+                Join VIP Lounge
+            </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="lg:ml-64 pt-16 min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[716px] w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<img alt="close-up of a sophisticated artisan cocktail in a crystal coupe glass with dark moody lighting and golden highlights" class="w-full h-full object-cover opacity-60" data-alt="close-up of a sophisticated artisan cocktail in a crystal coupe glass with dark moody lighting and golden highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4kRfvEtx0Z26pv5ZeEWojdLar_Ria-G__n9tAtQ_UmoYozAGYZ4FNVkxPtDueJxXFUUC0sp3wbLfrHSZQof9aWBqrITa0RYSUvwZKfUZtt89UIydpOLFQ0UbjpXxNdLT63916VC9yWmUcd_n68h7B_VfdSvEP-26bJthNjUfR5VinqBW8U4aSwPSmse0jOdEHDxX-u6QFpYNklXZjVyQ5uWjdxO4TEupTRv0ze9ZeOFrYSsJPqYDhKfTgO4SqpLwTvfLmKN4dwMI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-4">
+<h2 class="text-primary text-sm uppercase tracking-[0.4em] mb-4 font-body font-bold">ATHENA Premium Casino Bar</h2>
+<h1 class="text-6xl md:text-8xl serif-text font-bold tracking-tighter mb-2">フード＆ドリンク</h1>
+<div class="h-1 w-24 bg-primary mx-auto my-6"></div>
+<p class="serif-text text-2xl tracking-widest opacity-80 uppercase">MENU</p>
+</div>
+</section>
+<!-- Bento Layout Menu -->
+<section class="max-w-7xl mx-auto px-8 py-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Signature Cocktails (Main Feature) -->
+<div class="md:col-span-8 bg-surface-container-low p-12 rim-light rounded-lg relative overflow-hidden group" id="cocktails">
+<div class="absolute top-0 right-0 w-64 h-64 opacity-10 -mr-20 -mt-20">
+<span class="material-symbols-outlined text-[200px] text-primary">local_bar</span>
+</div>
+<div class="relative z-10">
+<h3 class="serif-text text-4xl text-primary mb-12 flex items-center gap-4">
+                            Signature Cocktails
+                            <span class="h-px flex-grow bg-primary/20"></span>
+</h3>
+<div class="grid grid-cols-1 gap-12">
+<div class="flex justify-between items-end border-b border-white/5 pb-4 group-hover:border-primary/20 transition-colors">
+<div>
+<h4 class="serif-text text-2xl mb-1">Seasonal Martini</h4>
+<p class="text-slate-400 text-sm italic">Crafted with peak seasonal botanicals and premium vermouth.</p>
+</div>
+<span class="text-primary serif-text text-xl">¥1,800</span>
+</div>
+<div class="flex justify-between items-end border-b border-white/5 pb-4 group-hover:border-primary/20 transition-colors">
+<div>
+<h4 class="serif-text text-2xl mb-1">Smoked Old Fashioned</h4>
+<p class="text-slate-400 text-sm italic">Hickory-smoked glass, aged bourbon, and secret bitters.</p>
+</div>
+<span class="text-primary serif-text text-xl">¥2,000</span>
+</div>
+<div class="flex justify-between items-end border-b border-white/5 pb-4 group-hover:border-primary/20 transition-colors">
+<div>
+<h4 class="serif-text text-2xl mb-1">Athena Gold Leaf Sour</h4>
+<p class="text-slate-400 text-sm italic">Yuzu-infused gin topped with edible 24k gold flakes.</p>
+</div>
+<span class="text-primary serif-text text-xl">¥2,400</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Spirit Selection (Sidebar Bento) -->
+<div class="md:col-span-4 flex flex-col gap-8" id="spirits">
+<div class="bg-surface-container p-8 rim-light rounded-lg flex-grow">
+<h3 class="serif-text text-2xl text-primary mb-6">Vintage Spirits</h3>
+<ul class="space-y-6">
+<li class="flex justify-between items-center">
+<span class="text-on-surface font-body tracking-wide uppercase text-xs">Premium Draft</span>
+<span class="text-primary text-sm">¥1,000</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-on-surface font-body tracking-wide uppercase text-xs">Highland Single Malt</span>
+<span class="text-primary text-sm">¥1,500〜</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-on-surface font-body tracking-wide uppercase text-xs">Glass Champagne</span>
+<span class="text-primary text-sm">¥2,500</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-on-surface font-body tracking-wide uppercase text-xs">Red / White Wine</span>
+<span class="text-primary text-sm">¥1,800〜</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-highest p-8 rim-light rounded-lg">
+<h3 class="serif-text text-2xl text-primary mb-6">Soft Drinks</h3>
+<ul class="space-y-4">
+<li class="flex justify-between items-center">
+<span class="text-on-surface-variant font-body text-sm">Artisan Ginger Ale</span>
+<span class="text-primary text-sm">¥800</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-on-surface-variant font-body text-sm">Fresh Fruit Juices</span>
+<span class="text-primary text-sm">¥800〜</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Visual Break (Photography) -->
+<div class="md:col-span-12 h-96 overflow-hidden rounded-lg relative">
+<img alt="high-end truffle pasta dish on a dark ceramic plate with a moody atmosphere and soft golden spotlight" class="w-full h-full object-cover" data-alt="high-end truffle pasta dish on a dark ceramic plate with a moody atmosphere and soft golden spotlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfOGMgSCH3cSB4hp8qzvvIrR1hcpI6DEDHnQuOuzuyvtVE8IOSublDX9KMTz0csq1UdIuC-YX8lBhZ2lpUXvoWDNs-bIBos3ziqy5pOrqWTUz40gfEVperxEY7QIkhuVMY2MQDac8SsNOY7xP83lZAPqjQObCD4earAMTWT2C5NYpL9O0XbZrP4naE3W_pPp2ypXp7nCTHFF7YS1b49mtSO-XuWDwm02xpA-T2BMUKEcj1Fpv9wdhunvpjarshNgHgyFI3lnh0zqE"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<div class="text-center">
+<p class="serif-text text-4xl italic px-12">"Elevating the art of nocturnal dining."</p>
+</div>
+</div>
+</div>
+<!-- Food Menu -->
+<div class="md:col-span-6 bg-surface-container-low p-12 rim-light rounded-lg" id="food">
+<h3 class="serif-text text-4xl text-primary mb-12">Epicurean Delights</h3>
+<div class="space-y-12">
+<div>
+<h4 class="text-xs uppercase tracking-widest text-primary mb-6 border-b border-primary/20 pb-2">Pasta &amp; Main</h4>
+<div class="space-y-8">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="serif-text text-xl">Truffle Carbonara</h5>
+<p class="text-slate-400 text-xs mt-1">Fresh linguine, black truffle shavings, 24-month aged Pecorino.</p>
+</div>
+<span class="text-primary text-lg serif-text">¥2,200</span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h5 class="serif-text text-xl">Seafood Linguine</h5>
+<p class="text-slate-400 text-xs mt-1">Saffron-infused pasta with premium selection of local seafood.</p>
+</div>
+<span class="text-primary text-lg serif-text">¥2,000</span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h5 class="serif-text text-xl">ATHENA Special Wagyu Dog</h5>
+<p class="text-slate-400 text-xs mt-1">A5 Wagyu sausage, brioche bun, truffle mustard.</p>
+</div>
+<span class="text-primary text-lg serif-text">¥1,500</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 bg-[#0d0d19] p-12 rim-light rounded-lg flex flex-col" id="desserts">
+<h3 class="serif-text text-4xl text-primary mb-12">Sweet Finale</h3>
+<div class="space-y-12 flex-grow">
+<div class="flex justify-between items-start group">
+<div class="w-2/3">
+<h5 class="serif-text text-2xl group-hover:text-primary transition-colors">Dark Chocolate Fondant</h5>
+<p class="text-slate-400 text-sm mt-2">70% cacao, salted caramel core, Madagascar vanilla gelato.</p>
+</div>
+<span class="text-primary text-xl serif-text">¥1,200</span>
+</div>
+<div class="flex justify-between items-start group">
+<div class="w-2/3">
+<h5 class="serif-text text-2xl group-hover:text-primary transition-colors">Seasonal Fruit Parfait</h5>
+<p class="text-slate-400 text-sm mt-2">Layered with artisanal cream and hand-selected orchard fruits.</p>
+</div>
+<span class="text-primary text-xl serif-text">¥1,200</span>
+</div>
+</div>
+<div class="mt-12 rounded overflow-hidden h-48">
+<img alt="elegant dark chocolate dessert with gold leaf garnish on a black slate plate" class="w-full h-full object-cover" data-alt="elegant dark chocolate dessert with gold leaf garnish on a black slate plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ_CIm_Qq9TX3W6Wn2gNUCOtIFRoR9dOE4okGvLqcvmsozU5lpF6_fkz-GSQ4Zh0dflLwiBS6wc7i7IRyPVPzsUX-cJnMeQR-1JGtSYJ-upAOo7x3bp_9glkOw0rcEk1hzMsMttJjdQXcwyeLfSIxRjtGXzgzo7yyVLltX5QHfpDe-qSD_M6NdY1BVSGgGhvhR5S7J8PyPabCpDKct1QBa2RwBNIAeamvX-EpwZqJJw3Qj5iInpqFLkUomPh_z4VXxT3D-CZZFT_s"/>
+</div>
+</div>
+</div>
+</section>
+<!-- VIP CTA Section -->
+<section class="max-w-7xl mx-auto px-8 py-24 border-t border-primary/10">
+<div class="bg-gradient-to-br from-surface-container to-surface-container-low p-12 md:p-24 rounded-lg flex flex-col md:flex-row items-center justify-between gap-12 overflow-hidden relative">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-leather.png')] opacity-20 pointer-events-none"></div>
+<div class="relative z-10 max-w-xl">
+<h2 class="serif-text text-5xl mb-6">Experience the Sanctuary</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-8">Elevate your evening with exclusive access to our VIP lounge. Private tables, rare vintage spirits, and bespoke service await.</p>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_20px_rgba(242,202,80,0.3)]">
+                        Request a VIP Experience
+                    </button>
+</div>
+<div class="relative z-10 w-full md:w-1/3 aspect-square border-2 border-primary/20 rounded-full flex items-center justify-center p-4">
+<div class="w-full h-full border border-primary/40 rounded-full flex items-center justify-center">
+<span class="serif-text text-6xl text-primary">A</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0d0d19] flex flex-col items-center gap-4 py-12 px-8 w-full border-t border-[#f2ca50]/10">
+<div class="text-[#f2ca50] font-bold uppercase tracking-[0.3em] font-['Manrope'] mb-4">ATHENA</div>
+<div class="flex gap-8 mb-6">
+<a class="text-slate-600 hover:text-[#f2ca50] transition-opacity font-['Manrope'] text-[10px] tracking-widest uppercase" href="#">Privacy Policy</a>
+<a class="text-slate-600 hover:text-[#f2ca50] transition-opacity font-['Manrope'] text-[10px] tracking-widest uppercase" href="#">Terms of Service</a>
+<a class="text-slate-600 hover:text-[#f2ca50] transition-opacity font-['Manrope'] text-[10px] tracking-widest uppercase" href="#">Responsible Gaming</a>
+</div>
+<p class="text-slate-600 font-['Manrope'] text-[10px] tracking-widest">© 2024 ATHENA CASINO &amp; LOUNGE. ALL RIGHTS RESERVED.</p>
+</footer>
+</body></html>
